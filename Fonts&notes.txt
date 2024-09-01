@@ -1,0 +1,12 @@
+Note: Remove Rating stars
+ 
+
+
+
+Fonts: 
+ are in folder for fonts
+
+
+Colors:
+color-primary: #11BB67;
+color-secondary: #FF6525;
