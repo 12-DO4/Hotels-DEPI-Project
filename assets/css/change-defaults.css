@@ -30,6 +30,26 @@ html {
   box-sizing: border-box;
 }
 
+.prm-bg {
+  background-color: var(--primary-color) !important;
+}
+
+.prm-clr {
+  color: var(--primary-color) !important;
+}
+
+.sec-bg {
+  background-color: var(--secondary-color) !important;
+}
+
+.sec-clr {
+  color: var(--secondary-color) !important;
+}
+
+a {
+  text-decoration: none;
+}
+
 .dropdown-menu {
   --bs-dropdown-bg: var(--black-bg);
   z-index: 99999;
