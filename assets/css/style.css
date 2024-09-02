@@ -1,0 +1,311 @@
+:root {
+    --it-ff-body: 'DM Sans', sans-serif;
+    --it-ff-heading: 'DM Sans', sans-serif;
+    --it-ff-gloss: 'Gloss And Bloom', sans-serif;
+    --it-ff-fontawesome: "Font Awesome 6 Pro";
+    --it-common-white: #fff;
+    --it-common-black: #161B18;
+    --it-heading-primary: #161B18;
+    --it-grey-1: #F3F8F6;
+    --it-grey-2: #fff4ef;
+    --it-text-body: #6B6F6A;
+    --it-theme-1: #11BB67;
+    --it-theme-2: #FF6525;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.fix {
+    overflow: hidden;
+}
+
+.pb-120 {
+    padding-bottom: 120px;
+}
+
+.pt-120 {
+    padding-top: 120px;
+}
+
+
+.it-destination-shape-1 {
+    position: absolute;
+    left: 7%;
+    animation: itupdown 0.8s infinite alternate;
+}
+
+
+img, svg {
+    vertical-align: middle;
+}
+
+a, .btn, button, input, select, textarea, li, img, .transition-3, h1, h2, h3, h4, h5, h6 {
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+
+.it-destination-shape-2 {
+    position: absolute;
+    right: 10%;
+    animation: rotate2 4s linear infinite;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+
+
+.justify-content-center {
+    justify-content: center !important;
+}
+
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1* var(--bs-gutter-y));
+    margin-right: calc(-.5* var(--bs-gutter-x));
+    margin-left: calc(-.5* var(--bs-gutter-x));
+}
+
+.mb-75 {
+    margin-bottom: 75px;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.it-section-subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    display: inline-block;
+    color: var(--it-theme-2);
+    font-family: var(--it-ff-gloss) !important;
+    margin-bottom: 15px;
+}
+
+
+@font-face {
+    font-family: 'Gloss And Bloom';
+    src: url('../fonts/Gloss\ And\ Bloom\ Font.ttf') format('woff2'),
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .it-section-title {
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 767px) {
+    .it-section-title {
+        font-size: 35px;
+    }
+}
+
+.it-section-title {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: var(--it-common-black);
+}
+
+
+.swiper-container-pointer-events {
+    touch-action: pan-y;
+}
+
+
+.swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+
+element.style {
+    transform: translate3d(-1092px, 0px, 0px);
+    transition-duration: 0ms;
+}
+
+.swiper-container-android .swiper-slide, .swiper-wrapper {
+    transform: translate3d(0px, 0, 0);
+}
+
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+}
+
+element.style {
+    width: 516px;
+    margin-right: 30px;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+}
+
+.it-destination-item {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.it-destination-thumb img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 1.3s;
+}
+
+.it-destination-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 30px;
+    z-index: 2;
+}
+
+.it-destination-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 0.8;
+    text-transform: capitalize;
+    color: var(--it-common-white);
+    transition: 0.3s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--it-ff-heading);
+    color: var(--it-heading-primary);
+    margin-top: 0px;
+    font-weight: 700;
+    line-height: 1.1;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+a, button {
+    color: inherit;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+a, .btn, button, input, select, textarea, li, img, .transition-3, h1, h2, h3, h4, h5, h6 {
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.it-destination-content span {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0em;
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--it-theme-2);
+}
+
+.it-destination-item::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: "";
+    background: var(--it-common-black);
+    opacity: 0.5;
+    border-radius: 10px;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.swiper-container .swiper-notification {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1000;
+}
+
+footer{
+    margin-top: 200px;
+}
+
+@keyframes itupdown {
+    0% {
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+      transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-20px);
+      -moz-transform: translateY(-20px);
+      -ms-transform: translateY(-20px);
+      -o-transform: translateY(-20px);
+      transform: translateY(-20px);
+    }
+  }
+
+
+  @keyframes rotate2 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
