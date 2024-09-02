@@ -1,0 +1,115 @@
+.tours {
+    position: relative;
+}
+
+.tours .moving-img-holder {
+    position: absolute;
+    top: 30px;
+}
+
+.tours .moving-img-holder:first-of-type {
+    left: 80px;
+}
+
+.tours .moving-img-holder:last-of-type {
+    right: 80px;
+}
+
+.card .card-img-holder {
+    position: relative;
+}
+
+.card .card-img-holder .img-part::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(22, 27, 24, 0.502);
+    z-index: 99;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card:hover .card-img-holder .img-part::after {
+    opacity: 1;
+}
+
+.card .card-img-holder .img-part {
+    overflow: hidden;
+}
+
+.card .card-img-holder .img-part img {
+    transition: 0.3s;
+}
+
+.card:hover .card-img-holder .img-part img {
+    transform: scale(1.2);
+}
+
+.card .badges {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+}
+
+.card span[class*="-badge"] {
+    font-size: 10px;
+}
+
+.card .actions {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    transform: translateY(50%);
+    color: white;
+    z-index: 9999;
+}
+
+.card .actions > * {
+    color: white;
+    background-color: var(--black-bg);
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.card .actions > * * {
+    transition: 0.3s;
+}
+
+.card .actions > *:hover * {
+    color: var(--secondary-color);
+}
+
+.card a.location {
+    font-size: 12px;
+    color: #6b6f6a;
+}
+
+.card .card-title a {
+    font-size: 24px;
+    color: var(--black-bg);
+    transition: 0.3s;
+}
+
+.card .card-title a:hover {
+    color: var(--secondary-color);
+}
+
+.card .review-price {
+    color: #6b6f6a;
+}
+
+.card .review-price *[class*="flaticon-"] {
+    font-size: 17px;
+}
+
+.card .price {
+    font-size: 14px;
+}
+
+.card hr {
+    border: 1px dashed black;
+}

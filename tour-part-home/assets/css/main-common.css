@@ -1,0 +1,17 @@
+.main-heading {
+    text-transform: capitalize;
+}
+
+.main-heading span {
+    color: var(--primary-color);
+    font-family: 'Gloss and bloom';
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.main-heading h3 {
+    color: var(--black-bg);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+}
