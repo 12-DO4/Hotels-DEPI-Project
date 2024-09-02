@@ -84,3 +84,18 @@ header li:hover > a {
 .shop-icon-holder:hover .border {
   border-color: var(--secondary-color) !important;
 }
+
+.shop-icon-holder a {
+  position: relative;
+}
+
+.shop-icon-holder a::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  position: absolute;
+  top: 7px;
+  right: 7px;
+}
