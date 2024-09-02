@@ -1,1 +1,13 @@
 # DEPI-Project
+- [ ] preloader
+- [x] top-header
+- [x] bottom-header
+- [ ] offcanvas
+- [x] hero-sec
+- [ ] dest-sec
+- [x] about-sec
+- [x] tours-sec
+- [ ] rating-sec
+- [ ] blog-sec
+- [x] footer
+- [ ] go-up-btn
