@@ -17,9 +17,10 @@
   <link rel="stylesheet" href="./assets/css/header.css" />
   <link rel="stylesheet" href="./assets/css/landing.css" />
   <link rel="stylesheet" href="./assets/css/main-common.css" />
-  <link rel="stylesheet" href="./assets/css/dest-sec.css" />
   <link rel="stylesheet" href="./assets/css/about-sec.css" />
   <link rel="stylesheet" href="./assets/css/card.css">
+  <link rel="stylesheet" href="./assets/css/tours-sec.css" />
+  <link rel="stylesheet" href="./assets/css/blog-sec.css" />
   <link rel="stylesheet" href="./assets/css/footer.css" />
 </head>
 <body>
@@ -143,11 +144,11 @@
                       Home
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Home 1</a></li>
-                      <li><a class="dropdown-item" href="#">Home 2</a></li>
-                      <li><a class="dropdown-item" href="#">Home 3</a></li>
-                      <li><a class="dropdown-item" href="#">Home 4</a></li>
-                      <li><a class="dropdown-item" href="#">Home 5</a></li>
+                      <li><a class="dropdown-item" href="#dest">Top Destinations</a></li>
+                      <li><a class="dropdown-item" href="#about">About Us</a></li>
+                      <li><a class="dropdown-item" href="#tours">Tours</a></li>
+                      <li><a class="dropdown-item" href="#review">Review</a></li>
+                      <li><a class="dropdown-item" href="#blog">Blog</a></li>
                     </ul>
                   </li>
                   <li class="dropdown py-3 me-4">
@@ -197,16 +198,16 @@
           </div>
           <div class="col-xl-3 col-lg-6 col-md-6 col-6">
             <div class="bottom-header-right d-flex justify-content-end align-items-center">
-              <div class="search-icon-holder me-4 me-xl-2 d-none">
+              <div class="search-icon-holder me-4 me-xl-4">
                 <button class="btn p-2"><i class="flaticon-search-interface-symbol"></i></button>
               </div>
-              <div class="shop-icon-holder me-4 me-xl-2 d-none d-md-block">
+              <div class="shop-icon-holder me-4 me-xl-4 d-none d-md-block">
                 <a href="#" class="btn border rounded-circle px-2 py-1"><i class="flaticon-bag"></i></a>
               </div>
-              <div class="contact-btn-holder me-4 me-xl-2 d-none d-md-block">
+              <div class="contact-btn-holder me-4 me-xl-0 d-none d-md-block">
                 <a href="#" class="btn btn-secondary p-3">Contact Us</a>
               </div>
-              <div class="menu-toggler-btn-holder">
+              <div class="menu-toggler-btn-holder d-xl-none">
                 <button class="btn btn-secondary p-3">
                   <i></i>
                   <i></i>
@@ -241,63 +242,83 @@
   
   
       <!-- start destinations -->
-      <section class="destinations p-rel py-5">
+      <section class="destinations p-rel py-5" id="dest">
         <div class="container my-5">
           <div class="row align-items-center justify-content-center mb-5">
             <div class="d-none d-md-block col-md-3 moving-img-holder text-center">
               <img src="./assets/imgs/Ballon-1.png" alt />
             </div>
             <div class="col-md-6 main-heading text-center">
-              <span class="colored-text">Top Destinations</span>
+              <span>Top Destinations</span>
               <h3 class="h1 m-0 mt-3">Explore the Beautiful Places Around the World</h3>
             </div>
             <div class="d-none d-md-block col-md-3 moving-img-holder text-center">
               <img src="./assets/imgs/star.png" alt />
             </div>
           </div>
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4 px-3 px-md-0">
+          <div class="row cards row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4 px-3 px-md-0">
             <div class="col">
               <div class="card rounded-4 overflow-hidden border-0 shadow-lg">
-                <img src="./assets/imgs/dest-1.jpg" class="card-img-top" alt="destinations image">
-                <div class="dest-info p-3">
-                  <h5 class="dest-name"><a href="#">Europe</a></h5>
-                  <span class="tours-num prm-clr">15 Tours</span>
+                <div class="card-img-holder p-rel">
+                  <div class="img-part">
+                    <img src="./assets/imgs/dest-1.jpg" class="card-img-top" alt="destinations image">
+                  </div>
+                  <div class="card-body card-body-abs p-3">
+                    <h5 class="card-title"><a href="#">Europe</a></h5>
+                    <span class="tours-num prm-clr">15 Tours</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card rounded-4 overflow-hidden border-0 shadow-lg d-none d-md-block">
-                <img src="./assets/imgs/dest-2.jpg" class="card-img-top" alt="destinations image">
-                <div class="dest-info p-3">
-                  <h5 class="dest-name"><a href="#">North America</a></h5>
-                  <span class="tours-num prm-clr">13 Tours</span>
+                <div class="card-img-holder p-rel">
+                  <div class="img-part">
+                    <img src="./assets/imgs/dest-2.jpg" class="card-img-top" alt="destinations image">
+                  </div>
+                  <div class="card-body card-body-abs p-3">
+                    <h5 class="card-title"><a href="#">North America</a></h5>
+                    <span class="tours-num prm-clr">13 Tours</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card rounded-4 overflow-hidden border-0 shadow-lg d-none d-lg-block">
-                <img src="./assets/imgs/dest-3.jpg" class="card-img-top" alt="destinations image">
-                <div class="dest-info p-3">
-                  <h5 class="dest-name"><a href="#">South Africa</a></h5>
-                  <span class="tours-num prm-clr">12 Tours</span>
+                <div class="card-img-holder p-rel">
+                  <div class="img-part">
+                    <img src="./assets/imgs/dest-3.jpg" class="card-img-top" alt="destinations image">
+                  </div>
+                  <div class="card-body card-body-abs p-3">
+                    <h5 class="card-title"><a href="#">South Africa</a></h5>
+                    <span class="tours-num prm-clr">12 Tours</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card rounded-4 overflow-hidden border-0 shadow-lg d-none d-xl-block">
-                <img src="./assets/imgs/dest-4.jpg" class="card-img-top" alt="destinations image">
-                <div class="dest-info p-3">
-                  <h5 class="dest-name"><a href="#">Costa Rica</a></h5>
-                  <span class="tours-num prm-clr">25 Tours</span>
+                <div class="card-img-holder p-rel">
+                  <div class="img-part">
+                    <img src="./assets/imgs/dest-4.jpg" class="card-img-top" alt="destinations image">
+                  </div>
+                  <div class="card-body card-body-abs p-3">
+                    <h5 class="card-title"><a href="#">Costa Rica</a></h5>
+                    <span class="tours-num prm-clr">25 Tours</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card rounded-4 overflow-hidden border-0 shadow-lg d-none">
-                <img src="./assets/imgs/dest-2.jpg" class="card-img-top" alt="destinations image">
-                <div class="dest-info p-3">
-                  <h5 class="dest-name"><a href="#">Europe</a></h5>
-                  <span class="tours-num prm-clr">15 Tours</span>
+                <div class="card-img-holder p-rel">
+                  <div class="img-part">
+                    <img src="./assets/imgs/dest-2.jpg" class="card-img-top" alt="destinations image">
+                  </div>
+                  <div class="card-body card-body-abs p-3">
+                    <h5 class="card-title"><a href="#">Europe</a></h5>
+                    <span class="tours-num prm-clr">15 Tours</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -308,7 +329,7 @@
       
   
       <!-- start about -->
-      <section class="about py-5 d-flex align-items-center">
+      <section class="about py-5 d-flex align-items-center" id="about">
         <div class="container my-5">
           <div class="row">
             <div class="col-lg-6 mb-5 mb-lg-0">
@@ -365,14 +386,14 @@
       
   
       <!-- start tour -->
-      <section class="tours p-rel py-5">
+      <section class="tours p-rel py-5" id="tours">
         <div class="container my-5">
           <div class="row align-items-center justify-content-center mb-5">
             <div class="d-none d-md-block col-md-2 moving-img-holder text-center">
               <img src="./assets/imgs/sunGlass.png" alt>
             </div>
             <div class="col-md-8 main-heading text-center">
-              <span class="colored-text">Featured Tours</span>
+              <span>Featured Tours</span>
               <h3 class="h1 m-0 mt-3">Tours Packages</h3>
             </div>
             <div class="d-none d-md-block col-md-2 moving-img-holder text-center">
@@ -383,7 +404,7 @@
           <div class="row cards row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 px-3 px-md-0">
             <div class="col">
               <div class="card rounded-4 overflow-hidden border-0 shadow-lg">
-                <div class="card-img-holder">
+                <div class="card-img-holder p-rel">
                   <div class="img-part">
                     <img src="./assets/imgs/tours-1.jpg" class="card-img-top" alt="tours image">
                   </div>
@@ -446,7 +467,7 @@
             </div>
             <div class="col">
               <div class="card rounded-4 overflow-hidden border-0 shadow-lg">
-                <div class="card-img-holder">
+                <div class="card-img-holder p-rel">
                   <div class="img-part">
                     <img src="./assets/imgs/tours-2.jpg" class="card-img-top" alt="tours image">
                   </div>
@@ -509,7 +530,7 @@
             </div>
             <div class="col">
               <div class="card rounded-4 overflow-hidden border-0 shadow-lg">
-                <div class="card-img-holder">
+                <div class="card-img-holder p-rel">
                   <div class="img-part">
                     <img src="./assets/imgs/tours-3.jpg" class="card-img-top" alt="tours image">
                   </div>
@@ -581,14 +602,14 @@
   
   
       <!-- start blog -->
-      <section class="blog p-rel py-5">
+      <section class="blog p-rel py-5" id="blog">
         <div class="container my-5">
           <div class="row justify-content-center align-items-center mb-5">
             <div class="d-none d-xl-block col-md-3 moving-img-holder text-center">
               <img src="./assets/imgs/ticket.png" alt>
             </div>
             <div class="col-xl-6 main-heading text-center">
-              <span class="colored-text">Our Resent Blog</span>
+              <span>Our Resent Blog</span>
               <h3 class="h1 m-0 mt-3">Amazing news & blog for every update</h3>
             </div>
           </div>
@@ -596,7 +617,7 @@
           <div class="cards row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 px-3 px-md-0">
             <div class="col">
               <div class="card rounded-4 overflow-hidden border-0 shadow-lg">
-                <div class="card-img-holder">
+                <div class="card-img-holder p-rel">
                   <div class="img-part">
                     <img src="./assets/imgs/blog-1.jpg" class="card-img-top" alt="tours image">
                   </div>
@@ -624,7 +645,7 @@
             </div>
             <div class="col">
               <div class="card rounded-4 overflow-hidden border-0 shadow-lg">
-                <div class="card-img-holder">
+                <div class="card-img-holder p-rel">
                   <div class="img-part">
                     <img src="./assets/imgs/blog-2.jpg" class="card-img-top" alt="tours image">
                   </div>
@@ -653,7 +674,7 @@
             </div>
             <div class="col">
               <div class="card rounded-4 overflow-hidden border-0 shadow-lg">
-                <div class="card-img-holder">
+                <div class="card-img-holder p-rel">
                   <div class="img-part">
                     <img src="./assets/imgs/blog-3.jpg" class="card-img-top" alt="tours image">
                   </div>
