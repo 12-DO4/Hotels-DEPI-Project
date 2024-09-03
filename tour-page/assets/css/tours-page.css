@@ -25,18 +25,3 @@
 .tours .cards .card .card-body * {
     color: white;
 }
-
-.tours .pages a {
-    font-size: 24px;
-    width: 50px;
-    height: 50px;
-    background-color: #eee;
-    border: #eee;
-    color: var(--black-bg);
-}
-
-.tours .pages a:hover {
-    background-color: var(--secondary-color);
-    border: var(--secondary-color);
-    color: white;
-}

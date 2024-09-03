@@ -18,15 +18,32 @@ section.breadcrumb .breadcrumb-content h3 {
 }
 
 .breadcrumb-menu {
+    box-sizing: border-box;
     --bs-breadcrumb-divider: "//";
     position: absolute;
     bottom: 0;
     left: 50%;
+    max-width: 50%;
     transform: translate(-50%, 50%);
 }
 
 .breadcrumb-item+.breadcrumb-item::before, 
 .breadcrumb-menu * {
     color: white;
-    font-size: 20px;
+    font-size: 13px;
+}
+
+.breadcrumb-item:last-of-type {
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} 
+
+@media screen and (min-width: 768px) {
+    .breadcrumb-item+.breadcrumb-item::before, 
+    .breadcrumb-menu * {
+        font-size: 20px;
+    }
 }
