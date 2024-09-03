@@ -1,3 +1,20 @@
+.p-rel {
+    position: relative;
+}
+
+.p-rel .moving-img-holder {
+    position: absolute;
+    top: 50px;
+}
+
+.p-rel .moving-img-holder:first-of-type {
+    left: 80px;
+}
+
+.p-rel .moving-img-holder:last-of-type {
+    right: 80px;
+}
+
 .main-heading {
     text-transform: capitalize;
 }
