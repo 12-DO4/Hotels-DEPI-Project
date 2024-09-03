@@ -47,12 +47,12 @@ html {
 }
 
 a {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 .dropdown-menu {
   --bs-dropdown-bg: var(--black-bg);
-  z-index: 99999;
+  z-index: 7777777;
 }
 
 .dropdown-menu a {

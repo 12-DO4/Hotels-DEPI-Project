@@ -10,7 +10,7 @@ footer {
 footer [class*="-bg-img-holder"] {
   position: absolute;
   bottom: 0;
-  z-index:1;
+  z-index: 22;
 }
 
 footer .right-bg-img-holder {
@@ -23,7 +23,7 @@ footer .left-bg-img-holder {
 
 footer .container {
   position: relative;
-  z-index: 2;
+  z-index: 333;
 }
 
 footer .footer-content-part {
@@ -58,7 +58,7 @@ footer li:not(.footer-social-menu li):hover a {
 
 footer .copyrights-area {
   position: relative;
-  z-index: 2;
+  z-index: 4444;
   color: white;
   background-color: #2D322F;
 }

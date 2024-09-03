@@ -50,7 +50,7 @@ header li:hover > a {
 }
 
 .bottom-header {
-  z-index: 99999999;
+  z-index: 55555;
 }
 
 .bottom-header .main-menu a {
