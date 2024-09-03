@@ -1,0 +1,42 @@
+.tours .cards .card .card-img-holder .img-part::after {
+    opacity: 1;
+    background-color: rgba(22, 27, 24, 0.502);
+}
+
+.tours .cards .card .actions {
+    bottom: 100%;
+    top: 20px;
+    right: 20px;
+    display: none;
+}
+
+.tours .cards .card:hover .actions {
+    display: flex;
+    flex-direction: column;
+}
+
+.tours .cards .card .card-body {
+    position: absolute;
+    bottom: 0;
+    z-index: 333;
+    width: 100%;
+}
+
+.tours .cards .card .card-body * {
+    color: white;
+}
+
+.tours .pages a {
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    background-color: #eee;
+    border: #eee;
+    color: var(--black-bg);
+}
+
+.tours .pages a:hover {
+    background-color: var(--secondary-color);
+    border: var(--secondary-color);
+    color: white;
+}

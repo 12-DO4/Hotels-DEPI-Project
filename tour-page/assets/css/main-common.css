@@ -1,0 +1,34 @@
+.p-rel {
+    position: relative;
+}
+
+.p-rel .moving-img-holder {
+    position: absolute;
+    top: 50px;
+}
+
+.p-rel .moving-img-holder:first-of-type {
+    left: 80px;
+}
+
+.p-rel .moving-img-holder:last-of-type {
+    right: 80px;
+}
+
+.main-heading {
+    text-transform: capitalize;
+}
+
+.main-heading span {
+    color: var(--primary-color);
+    font-family: 'Gloss and bloom';
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.main-heading h3 {
+    color: var(--black-bg);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+}

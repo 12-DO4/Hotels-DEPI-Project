@@ -1,0 +1,32 @@
+section.breadcrumb {
+    background-image: url(../imgs/breadcrumb.jpg), linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-transform: capitalize;
+}
+
+section.breadcrumb .overlay {
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+section.breadcrumb .breadcrumb-content h3 {
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+    font-weight: 700;
+}
+
+.breadcrumb-menu {
+    --bs-breadcrumb-divider: "//";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.breadcrumb-item+.breadcrumb-item::before, 
+.breadcrumb-menu * {
+    color: white;
+    font-size: 20px;
+}
