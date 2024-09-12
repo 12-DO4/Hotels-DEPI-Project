@@ -18,6 +18,12 @@ url("../fonts/flaticon_mycollection.ttf?b3f36083de99f2058f88bbdb4c51e96e") forma
 url("../fonts/flaticon_mycollection.svg?b3f36083de99f2058f88bbdb4c51e96e#flaticon_mycollection") format("svg")
 }
 
+*[class^="flaticon-"], *[class*=" flaticon-"] {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
 i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
     font-family: flaticon_mycollection !important;
     font-style: normal;
@@ -27,8 +33,6 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    display: flex;
-    align-items: center;
 }
 
 .flaticon-maps-and-flags:before {

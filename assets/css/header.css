@@ -49,6 +49,10 @@ header li:hover > a {
   margin-left: 35px;
 }
 
+.bottom-header {
+  z-index: 55555;
+}
+
 .bottom-header .main-menu a {
   color: var(--black-bg);
   font-size: 17px;
