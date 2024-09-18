@@ -1,0 +1,105 @@
+.top-header {
+  font-size: 15px;
+  background-color: var(--black-bg);
+}
+
+header li:hover > a {
+  color: var(--secondary-color) !important;
+}
+
+.top-header li:not(.dropdown-menu li) {
+  padding: 13px 0;
+}
+
+.top-header li a {
+  color: white;
+}
+
+.top-header-left .nav li a {
+  margin-right: 20px;
+}
+
+.top-header-left *[class*="flaticon-"] {
+  color: var(--secondary-color);
+  font-size: 22px;
+  margin-right: 10px;
+}
+
+.top-header-left [class*="flaticon-email"] {
+  font-size: 25px;
+}
+
+.top-header-right .header-social-menu {
+  margin-left: 100px;
+  position: relative;
+}
+
+.top-header-right .header-social-menu::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 130%;
+  top: 50%;
+  left: -40px;
+  background-color: white;
+  transform: translateY(-50%);
+}
+
+.top-header-right .preferences-menu .language {
+  margin-left: 35px;
+}
+
+.bottom-header {
+  z-index: 55555;
+}
+
+.bottom-header .main-menu a {
+  color: var(--black-bg);
+  font-size: 17px;
+}
+
+.bottom-header .dropdown-toggle::after {
+  color: black;
+}
+
+.menu-toggler-btn-holder i {
+  display: block;
+  width: 15px;
+  height: 2px;
+  background-color: white;
+}
+
+.menu-toggler-btn-holder i:nth-of-type(2) {
+  margin: 5px 0 5px 2px;
+}
+
+[class*="-icon-holder"] a, [class*="-icon-holder"] button {
+  font-size: 20px;
+}
+
+.search-icon-holder:hover {
+  color: var(--secondary-color);
+}
+
+.search-icon-holder button {
+  border: none;
+}
+
+.shop-icon-holder:hover .border {
+  border-color: var(--secondary-color) !important;
+}
+
+.shop-icon-holder a {
+  position: relative;
+}
+
+.shop-icon-holder a::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  position: absolute;
+  top: 7px;
+  right: 7px;
+}
