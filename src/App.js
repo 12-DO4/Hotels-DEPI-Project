@@ -5,9 +5,6 @@ import './assets/css/change-defaults.css';
 import Header from './layout/Header';
 import './assets/css/main-common.css';
 import Footer from './layout/Footer';
-import Tour from './components/Tour';
-import Breadcrumb from './layout/Breadcrumb';
-import PageNums from './layout/PageNums';
 
 function App() {
   return (
