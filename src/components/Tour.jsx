@@ -9,7 +9,7 @@ function Tour() {
   useEffect(async() => {
     async function handleFetch() {
       const response = await axios.get('/data.json')
-      setTravels(response.data);
+      setTravels(response.data['travels']);
     }
     handleFetch();
   }, [])
