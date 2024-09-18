@@ -4,6 +4,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './assets/css/change-defaults.css';
 import Header from './layout/Header';
 import './assets/css/main-common.css';
+
 import Footer from './layout/Footer';
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
       <Header />
       
       <main>
-        
+        {/*  */}
       </main>
       
       <Footer />
