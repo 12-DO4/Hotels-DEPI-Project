@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from "react";
-import Card from "../layout/Card";
-import axios from "axios";
+// import Card from "../layout/Card";
+// import axios from "axios";
 
 
 function Tour() {
-  const [travels, setTravels] = useState([])
+  // const [travels, setTravels] = useState([])
   
-  useEffect(async() => {
-    async function handleFetch() {
-      const response = await axios.get('/data.json')
-      setTravels(response.data['travels']);
-    }
-    handleFetch();
-  }, [])
+  // useEffect(async() => {
+  //   async function handleFetch() {
+  //     const response = await axios.get('/data.json')
+  //     setTravels(response.data['travels']);
+  //   }
+  //   handleFetch();
+  // }, [])
   
-  console.log(travels)
+  // console.log(travels)
 
   return (
     <section className="tours p-rel pt-5">
