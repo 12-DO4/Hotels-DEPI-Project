@@ -1,0 +1,8 @@
+section.blog .cards .card .date-comments {
+    color: #6b6f6a;
+    font-size: 12px;
+}
+
+section.blog .cards .card .date-comments *[class*="flaticon-"] {
+    font-size: 17px;
+}
