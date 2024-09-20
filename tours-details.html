@@ -23,7 +23,7 @@
   <main>
     
     <!-- start tours details -->
-    <section class="tours-details mt-5">
+    <section class="tours-details my-5">
       <div class="container">
         <div class="row justify-content-between">
           <div class="col-lg-7">
@@ -119,107 +119,100 @@
               </div>
               <div class="card-body p-5">
                 <div class="package-details-form">
-                  <div class="row g-3 align-items-center tour-date justify-content-between mb-3">
-                    <div class="col-2">
-                      <label for="date" class="col-form-label fs-4">Date</label>
+                  <form action="">
+                    <div class="row g-3 align-items-center tour-date justify-content-between mb-3">
+                      <div class="col-auto">
+                        <label for="date" class="col-form-label fs-5 fw-bold">Date</label>
+                      </div>
+                      <div class="col">
+                        <input type="date" id="date" class="form-control" placeholder="Select a Date">
+                      </div>
                     </div>
-                    <div class="col-8">
-                      <input type="date" id="date" class="form-control" placeholder="Select a Date">
+                    <div class="row g-3 align-items-center tour-time justify-content-between mb-3">
+                      <div class="col-auto">
+                        <label for="time" class="col-form-label fs-5 fw-bold">Time</label>
+                      </div>
+                      <div class="col">
+                        <select class="form-select" aria-label="Default select example">
+                          <option selected class="fw-bold">Default sorting</option>
+                          <option value="1">Low to High</option>
+                          <option value="2">High to Low</option>
+                          <option value="3">New Added</option>
+                          <option value="3">On Sale</option>
+                        </select>
+                      </div>
                     </div>
-                  </div>
-                  <div class="row g-3 align-items-center tour-time justify-content-between mb-3">
-                    <div class="col-2">
-                      <label for="time" class="col-form-label fs-4">Time</label>
-                    </div>
-                    <div class="col-8">
-                      <select class="form-select" aria-label="Default select example">
-                        <option selected class="fw-bold">Default sorting</option>
-                        <option value="1">Low to High</option>
-                        <option value="2">High to Low</option>
-                        <option value="3">New Added</option>
-                        <option value="3">On Sale</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="row g-3 align-items-center tour-time justify-content-between mb-3">
-                    <div class="col-12">
-                      <label class="col-form-label fs-4">Tickets</label>
-                    </div>
-                    <div class="col-12">
-                      <div class="tickets">
-                        <div class="row g-3 align-items-center tour-time justify-content-between mb-3 age adults">
-                          <div class="col-auto">
-                            <label for="adult" class="col-form-label">Adults (18+years)</label>
+                    <div class="row g-3 align-items-center tour-time justify-content-between mb-3">
+                      <div class="col-12">
+                        <label class="col-form-label fs-5 fw-bold">Tickets</label>
+                      </div>
+                      <div class="col-12">
+                        <div class="tickets">
+                          <div class="row g-3 align-items-center tour-time justify-content-between mb-3 age adults">
+                            <div class="col-auto">
+                              <label for="adult" class="col-form-label">Adults (18+years)</label>
+                            </div>
+                            <div class="col-auto">
+                              <div class="row quantity align-items-center g-3">
+                                <button class="col-auto btn btn-secondary decrease p-2 fw-bolder">-</button>
+                                <input type="col-auto number" id="adults" class="form-control-color text-center mx-1 amount" value="1">
+                                <button class="col-auto btn btn-secondary increase p-2 fw-bolder">+</button>
+                              </div>
+                            </div>
                           </div>
-                          <div class="col-auto">
-                            <div class="row quantity align-items-center g-3">
-                              <button class="col-auto btn btn-secondary decrease">-</button>
-                              <input type="col-auto number" id="adults" class="form-control-color text-center amount" value="1">
-                              <button class="col-auto btn btn-secondary increase">+</button>
+                          <div class="row g-3 align-items-center tour-time justify-content-between mb-3 age kids">
+                            <div class="col-auto">
+                              <label for="kids" class="col-form-label">Kids (13years)</label>
+                            </div>
+                            <div class="col-auto">
+                              <div class="row quantity align-items-center justify-content-center g-3">
+                                <button class="col-auto btn btn-secondary decrease p-2 fw-bolder">-</button>
+                                <input type="col-auto number" id="kids" class="form-control-color text-center mx-1 amount" value="1">
+                                <button class="col-auto btn btn-secondary increase p-2 fw-bolder">+</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row g-3 align-items-center tour-time justify-content-between mb-3 age children">
+                            <div class="col-auto">
+                              <label for="children" class="col-form-label">Children (5+years)</label>
+                            </div>
+                            <div class="col-auto">
+                              <div class="row quantity align-items-center justify-content-center g-3">
+                                <button class="col-auto btn btn-secondary decrease p-2 fw-bolder">-</button>
+                                <input type="col-auto number" id="children" class="form-control-color text-center mx-1 amount" value="1">
+                                <button class="col-auto btn btn-secondary increase p-2 fw-bolder">+</button>
+                              </div>
                             </div>
                           </div>
                         </div>
-                        <div class="row g-3 align-items-center tour-time justify-content-between mb-3 age kids">
-                          <div class="col-auto">
-                            <label for="kids" class="col-form-label">Kids (13years)</label>
-                          </div>
-                          <div class="col-auto">
-                            <div class="row quantity align-items-center justify-content-center g-3">
-                              <button class="col-auto btn btn-secondary decrease">-</button>
-                              <input type="col-auto number" id="kids" class="form-control-color text-center amount" value="1">
-                              <button class="col-auto btn btn-secondary increase">+</button>
-                            </div>
-                          </div>
+                      </div>
+                    </div>
+                    <div class="row g-3 align-items-center tour-time justify-content-between mb-3">
+                      <div class="col-12">
+                        <label class="col-form-label fs-5 fw-bold">Additional Service</label>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-check">
+                          <input class="form-check-input" name="services[]" type="checkbox" value="" id="guide">
+                          <label class="form-check-label" for="guide">
+                            <span>Additional Guide</span> <span>$420</span>
+                          </label>
                         </div>
-                        <div class="row g-3 align-items-center tour-time justify-content-between mb-3 age children">
-                          <div class="col-auto">
-                            <label for="children" class="col-form-label">Children (5+years)</label>
-                          </div>
-                          <div class="col-auto">
-                            <div class="row quantity align-items-center justify-content-center g-3">
-                              <button class="col-auto btn btn-secondary decrease">-</button>
-                              <input type="col-auto number" id="children" class="form-control-color text-center amount" value="1">
-                              <button class="col-auto btn btn-secondary increase">+</button>
-                            </div>
-                          </div>
+                        <div class="form-check">
+                          <input class="form-check-input" name="services[]" type="checkbox" value="internet" id="internet" checked>
+                          <label class="form-check-label" for="internet">
+                            <span>Internet</span> <span>$420</span>
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" name="services[]" type="checkbox" value="photography" id="photography">
+                          <label class="form-check-label" for="photography">
+                            <span>photography</span> <span>$420</span>
+                          </label>
                         </div>
                       </div>
                     </div>
-                  </div>
-
-                  <div class="tour-additional-service">
-                      <h6>Additional Service</h6>
-                      <div class="service-option">
-                        <input
-                          name="additional-service"
-                          type="checkbox"
-                          id="additional-service"
-                        />
-                        <label for="additional-service"
-                          >Additional Guide<span>$420</span></label
-                        >
-                      </div>
-                      <div class="service-option">
-                        <input
-                          name="additional-service"
-                          type="checkbox"
-                          id="additional-service"
-                        />
-                        <label for="additional-service"
-                          >Internet<span>$420</span></label
-                        >
-                      </div>
-                      <div class="service-option">
-                        <input
-                          name="additional-service"
-                          type="checkbox"
-                          id="additional-service"
-                        />
-                        <label for="additional-service"
-                          >photography <span>$420</span></label
-                        >
-                      </div>
-                    </div>
+                    <!-- to be cont... -->
                     <div class="tour-cost">
                       <p>
                         Total Cost: <span class="price">$800.00</span> /
