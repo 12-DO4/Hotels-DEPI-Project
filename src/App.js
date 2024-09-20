@@ -6,6 +6,7 @@ import Header from './layout/Header';
 import './assets/css/main-common.css';
 
 import Footer from './layout/Footer';
+import BtnTop from './layout/BtnTop';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
       </main>
       
       <Footer />
+
+      <BtnTop />
     </>
   );
 }

@@ -47,3 +47,7 @@
     background-color: var(--secondary-color);
     color: white;
 }
+
+.btn-up {
+    z-index: 999999999;
+}
