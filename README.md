@@ -10,4 +10,4 @@
 - [ ] rating-sec
 - [x] blog-sec
 - [x] footer
-- [ ] go-top-btn
+- [x] go-top-btn
