@@ -1,9 +1,9 @@
 import React from 'react'
 import '../assets/css/header.css'
 import logo_path from "../assets/imgs/logo.png"
-import egypt_flag_path from "../assets/imgs/Egypt-Flag-icon.png"
-import spanish_flag_path from "../assets/imgs/Spain-Flag-icon.png"
-import usa_flag_path from "../assets/imgs/USA-Flag-icon.png"
+import flag_egypt_path from "../assets/imgs/flag-egypt.png"
+import flag_spanish_path from "../assets/imgs/flag-spain.png"
+import flag_usa_path from "../assets/imgs/flag-usa.png"
 
 function Header() {
   return (
@@ -51,25 +51,25 @@ function Header() {
                     </li>
                     <li className="dropdown language p-0 d-none d-md-flex">
                       <a className="nav-link active dropdown-toggle p-0" href="#" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">
-                        <img src={usa_flag_path} className="me-1" alt="USA Flag" />
+                        <img src={ flag_usa_path } className="me-1" alt="USA Flag" />
                         English
                       </a>
                       <ul className="dropdown-menu">
                         <li>
                           <a className="dropdown-item" href="#">
-                            <img src={usa_flag_path} className="me-1" alt = "USA Flag" />
+                            <img src={ flag_usa_path } className="me-1" alt = "USA Flag" />
                             English
                           </a>
                         </li>
                         <li>
                           <a className="dropdown-item" href="#">
-                            <img src={egypt_flag_path} className="me-1" alt = "Egypt Flag" />
+                            <img src={ flag_egypt_path } className="me-1" alt = "Egypt Flag" />
                             Arabic
                           </a>
                         </li>
                         <li>
                           <a className="dropdown-item" href="#">
-                            <img src={spanish_flag_path} className="me-1" alt="Spain Flag" />
+                            <img src={ flag_spanish_path } className="me-1" alt="Spain Flag" />
                             Spanish
                           </a>
                         </li>

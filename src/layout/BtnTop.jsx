@@ -4,8 +4,8 @@ function BtnTop() {
   
   // go to top function
   const handleScrollToTop = (event) => {
-    event.preventDefault(); // Prevent the default action of the link
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (

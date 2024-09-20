@@ -1,22 +1,22 @@
 import React from 'react'
 import '../assets/css/footer.css'
-import left_tree_path from "../assets/imgs/left-tree.png"
-import right_tree_path from "../assets/imgs/right-tree.png"
+import tree_left_path from "../assets/imgs/tree-left.png"
+import tree_right_path from "../assets/imgs/tree-right.png"
 import logo_path from "../assets/imgs/logo.png"
 
 function Footer() {
   return (
     <footer>
     <div className="footer-content">
-      <div className="left-bg-img-holder"><img src={left_tree_path} alt="left tree" /></div>
-      <div className="right-bg-img-holder"><img src={right_tree_path} alt="right tree" /></div>
+      <div className="left-bg-img-holder"><img src={ tree_left_path } alt="left tree" /></div>
+      <div className="right-bg-img-holder"><img src={ tree_right_path } alt="right tree" /></div>
       
       <div className="container pt-5">
         <div className="row my-5 py-5">
           <div className="col-xl-3 col-lg-4 col-md-6">
             <div className="footer-content-part pe-4 mb-5">
               <div className="footer-logo">
-                <a href="#"><img src={logo_path} alt="Travello Logo" /></a>
+                <a href="#"><img src={ logo_path } alt="Travello Logo" /></a>
               </div>
               <p className="my-4 pe-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</p>
               <ul className="footer-social-menu nav">
