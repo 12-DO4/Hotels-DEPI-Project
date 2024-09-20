@@ -2,27 +2,125 @@
   "travels": [
     {
       "id": 1,
-      "title": "Cuba Sailing Adventure"
+      "title": "Cuba Sailing Adventure",
+      "imgSrc": "../assets/imgs/img-4.jpg"
     },
     {
       "id": 2,
-      "title": "Discovery Island Kayak"
+      "title": "Discovery Island Kayak",
+      "imgSrc": "../assets/imgs/img-3.jpg"
     },
     {
       "id": 3,
-      "title": "Beautiful Parasailing"
+      "title": "Beautiful Parasailing",
+      "imgSrc": "../assets/imgs/img-1.jpg"
     },
     {
       "id": 4,
-      "title": "Sight Seeing & Taj Mahal"
+      "title": "Sight Seeing & Taj Mahal",
+      "imgSrc": "../assets/imgs/img-4.jpg"
     },
     {
       "id": 5,
-      "title": "Peninsula & Caribbean"
+      "title": "Peninsula & Caribbean",
+      "imgSrc": "../assets/imgs/img-1.jpg"
     },
     {
       "id": 6,
-      "title": "Boathouse Neighborhood"
+      "title": "Boathouse Neighborhood",
+      "imgSrc": "../assets/imgs/img-3.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Alaskan Glacier Cruise",
+      "imgSrc": "../assets/imgs/img-4.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Amazon Jungle Expedition",
+      "imgSrc": "../assets/imgs/img-1.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Bali Beach Getaway",
+      "imgSrc": "../assets/imgs/img-4.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Swiss Alps Hiking",
+      "imgSrc": "../assets/imgs/img-3.jpg"
     }
-  ]
+  ],
+  "travelDetails": {
+    "1": {
+      "title": "Cuba Sailing Adventure",
+      "description": "Sail around the beautiful coasts of Cuba, experiencing local culture, cuisine, and the crystal-clear waters.",
+      "duration": "7 days",
+      "price": 2500,
+      "availableSeats": 12
+    },
+    "2": {
+      "title": "Discovery Island Kayak",
+      "description": "Explore the hidden islands while kayaking, witness wildlife, and camp on untouched beaches.",
+      "duration": "5 days",
+      "price": 1200,
+      "availableSeats": 10
+    },
+    "3": {
+      "title": "Beautiful Parasailing",
+      "description": "Fly over stunning coastlines and enjoy a thrilling parasailing adventure with breathtaking views.",
+      "duration": "2 hours",
+      "price": 200,
+      "availableSeats": 15
+    },
+    "4": {
+      "title": "Sight Seeing & Taj Mahal",
+      "description": "Experience the wonders of India with a guided tour to the Taj Mahal and other historic sites.",
+      "duration": "3 days",
+      "price": 800,
+      "availableSeats": 20
+    },
+    "5": {
+      "title": "Peninsula & Caribbean",
+      "description": "A luxurious cruise through the Caribbean, stopping at popular ports and enjoying onboard activities.",
+      "duration": "10 days",
+      "price": 3500,
+      "availableSeats": 8
+    },
+    "6": {
+      "title": "Boathouse Neighborhood",
+      "description": "Relax in a cozy boathouse community, enjoy fishing, kayaking, and serene sunsets.",
+      "duration": "4 days",
+      "price": 950,
+      "availableSeats": 6
+    },
+    "7": {
+      "title": "Alaskan Glacier Cruise",
+      "description": "Cruise along Alaska's majestic glaciers, witness whales, and enjoy the crisp wilderness.",
+      "duration": "7 days",
+      "price": 2700,
+      "availableSeats": 14
+    },
+    "8": {
+      "title": "Amazon Jungle Expedition",
+      "description": "Venture deep into the Amazon, discovering unique wildlife and exploring the vibrant ecosystem.",
+      "duration": "8 days",
+      "price": 3100,
+      "availableSeats": 5
+    },
+    "9": {
+      "title": "Bali Beach Getaway",
+      "description": "Relax on Bali's pristine beaches, indulge in spa treatments, and explore nearby temples.",
+      "duration": "6 days",
+      "price": 1800,
+      "availableSeats": 18
+    },
+    "10": {
+      "title": "Swiss Alps Hiking",
+      "description": "Hike through the breathtaking Swiss Alps, enjoying nature's beauty and crisp mountain air.",
+      "duration": "9 days",
+      "price": 2900,
+      "availableSeats": 12
+    }
+  }
 }

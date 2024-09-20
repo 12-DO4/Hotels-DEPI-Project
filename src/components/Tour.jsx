@@ -1,34 +1,38 @@
-import React, { useState, useEffect } from "react";
-// import Card from "../layout/Card";
-// import axios from "axios";
+import React, { useState, useEffect, createContext } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchTravels } from "../APIs/travelsApi";
+import Card from "../layout/Card";
+import "../assets/css/tours-sec.css";
+import "../assets/css/tours-page.css";
+import  Breadcrumb  from "../layout/Breadcrumb";
 
+export const travelData = createContext();
 
 function Tour() {
-  // const [travels, setTravels] = useState([])
-  
-  // useEffect(async() => {
-  //   async function handleFetch() {
-  //     const response = await axios.get('/data.json')
-  //     setTravels(response.data['travels']);
-  //   }
-  //   handleFetch();
-  // }, [])
-  
-  // console.log(travels)
+  const travels = useSelector((state) => state.travelsData.travels);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchTravels());
+  }, []);
+  console.log(travels);
 
   return (
-    <section className="tours p-rel pt-5">
-      <div className="container mt-5">
-        <div className="row cards row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 px-3 px-md-0">
-          <div className="col">
-            {/* { travels.map(travel => (
-              <Card traveldetails={travel} />
-            )) } */}
+    <>
+      <Breadcrumb breadCrumbName={"Tour"} />
+      <section className="tours p-rel pt-5">
+        <div className="container mt-5">
+          <div className="row cards row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 px-3 px-md-0">
+            {travels.map((travel, index) => (
+              <travelData.Provider value={[travel, index]}>
+                <Card />
+              </travelData.Provider>
+            ))}
           </div>
         </div>
-      </div>
-    </section>
-  )
+      </section>
+    </>
+  );
 }
 
-export default Tour
+export default Tour;
