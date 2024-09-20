@@ -8,6 +8,7 @@
 :root {
   --primary-color: #ff6525;
   --secondary-color: #11bb67;
+  --secondary-color-subtle: #f3f8f6;
   --black-bg: #161b18;
 }
 
@@ -40,6 +41,10 @@ html {
 
 .sec-bg {
   background-color: var(--secondary-color) !important;
+}
+
+.sec-bg-subtle {
+  background-color: var(--secondary-color-subtle) !important;
 }
 
 .sec-clr {
