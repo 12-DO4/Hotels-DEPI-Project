@@ -1,7 +1,7 @@
 import React, { useEffect, createContext } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchTravels } from "../APIs/travelsApi";
-import Card from "../layout/Card";
+import CardSec from "../layout/CardSec";
 import "../assets/css/tours-sec.css";
 
 export const travelData = createContext();
@@ -33,7 +33,7 @@ function TourSec() {
         <div class="row cards row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 px-3 px-md-0">
           {travels.map((travel, index) => (
             <travelData.Provider value={[travel, index]}>
-              <Card />
+              <CardSec />
             </travelData.Provider>
           )).slice(0, 3)}
         </div>

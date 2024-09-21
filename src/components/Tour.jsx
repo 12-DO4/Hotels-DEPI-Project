@@ -1,6 +1,9 @@
 import React, { useEffect, createContext } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchTravels } from "../APIs/travelsApi";
+import Header from "../layout/Header";
+import Footer from "../layout/Footer";
+import BtnTop from "../layout/BtnTop";
 import Breadcrumb from "../layout/Breadcrumb";
 import Card from "../layout/Card";
 import "../assets/css/tours-sec.css";
@@ -19,21 +22,29 @@ function Tour() {
 
   return (
     <>
-      <Breadcrumb pageName={"Tour"} />
-      
-      <section className="tours p-rel pt-5">
-        <div className="container mt-5">
-          <div className="row cards row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 px-3 px-md-0">
-            {travels.map((travel, index) => (
-              <travelData.Provider value={[travel, index]}>
-                <Card />
-              </travelData.Provider>
-            ))}
+      <Header />
+
+      <main>
+        <Breadcrumb pageName={"Tour"} />
+
+        <section className="tours p-rel pt-5">
+          <div className="container mt-5">
+            <div className="row cards row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 px-3 px-md-0">
+              {travels.map((travel, index) => (
+                <travelData.Provider value={[travel, index]}>
+                  <Card />
+                </travelData.Provider>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-      
-      <PageNums />
+        </section>
+
+        <PageNums />
+      </main>
+
+      <Footer />
+
+      <BtnTop />
     </>
   );
 }

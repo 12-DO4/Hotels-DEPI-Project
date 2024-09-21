@@ -1,7 +1,7 @@
 import React, { useEffect, createContext } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchPosts } from "../APIs/postsAPI";
-import CardPost from "../layout/CardPost";
+import CardPostSec from "../layout/CardPostSec";
 import "../assets/css/tours-sec.css";
 import "../assets/css/blog-sec.css";
 
@@ -30,7 +30,7 @@ function BlogSec() {
         <div class="cards row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 px-3 px-md-0">
           {posts.map((post, index) => (
             <postsData.Provider value={[post, index]}>
-              <CardPost />
+              <CardPostSec />
             </postsData.Provider>
           )).slice(0, 3)}
         </div>

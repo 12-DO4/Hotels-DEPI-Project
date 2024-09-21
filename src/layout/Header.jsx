@@ -4,6 +4,7 @@ import logo_path from "../assets/imgs/logo.png"
 import flag_egypt_path from "../assets/imgs/flag-egypt.png"
 import flag_spanish_path from "../assets/imgs/flag-spain.png"
 import flag_usa_path from "../assets/imgs/flag-usa.png"
+import { Link } from 'react-router-dom'
 
 function Header() {
   return (
@@ -40,62 +41,62 @@ function Header() {
                 <div className="d-flex justify-content-end align-items-center">
                   <ul className="preferences-menu nav">
                     <li className="dropdown p-0 d-none d-xl-flex">
-                      <a className="nav-link active dropdown-toggle p-0" href="#" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">
+                      <Link className="nav-link active dropdown-toggle p-0" to={'/'} data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">
                         $ USD
-                      </a>
+                      </Link>
                       <ul className="dropdown-menu">
-                        <li><a className="dropdown-item" href="#">$ USD</a></li>
-                        <li><a className="dropdown-item" href="#">£ EGP</a></li>
-                        <li><a className="dropdown-item" href="#">€ EUR</a></li>
+                        <li><Link className="dropdown-item" to={'/'}>$ USD</Link></li>
+                        <li><Link className="dropdown-item" to={'/'}>£ EGP</Link></li>
+                        <li><Link className="dropdown-item" to={'/'}>€ EUR</Link></li>
                       </ul>
                     </li>
                     <li className="dropdown language p-0 d-none d-md-flex">
-                      <a className="nav-link active dropdown-toggle p-0" href="#" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">
+                      <Link className="nav-link active dropdown-toggle p-0" to={'/'} data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">
                         <img src={ flag_usa_path } className="me-1" alt="USA Flag" />
                         English
-                      </a>
+                      </Link>
                       <ul className="dropdown-menu">
                         <li>
-                          <a className="dropdown-item" href="#">
+                          <Link className="dropdown-item" to={'/'}>
                             <img src={ flag_usa_path } className="me-1" alt = "USA Flag" />
                             English
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a className="dropdown-item" href="#">
+                          <Link className="dropdown-item" to={'/'}>
                             <img src={ flag_egypt_path } className="me-1" alt = "Egypt Flag" />
                             Arabic
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a className="dropdown-item" href="#">
+                          <Link className="dropdown-item" to={'/'}>
                             <img src={ flag_spanish_path } className="me-1" alt="Spain Flag" />
                             Spanish
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </li>
                   </ul>
                   <ul className="header-social-menu nav">
                     <li className="p-0">
-                      <a className="nav-link p-0 me-2" href="#" target="_blank">
+                      <Link className="nav-link p-0 me-2" to={'/'} target="_blank">
                         <i className="flaticon-facebook-app-symbol"></i>
-                      </a>
+                      </Link>
                     </li>
                     <li className="p-0">
-                      <a className="nav-link p-0 me-2" href="#" target="_blank">
+                      <Link className="nav-link p-0 me-2" to={'/'} target="_blank">
                         <i className="flaticon-twitter"></i>
-                      </a>
+                      </Link>
                     </li>
                     <li className="p-0">
-                      <a className="nav-link p-0 me-2" href="#" target="_blank">
+                      <Link className="nav-link p-0 me-2" to={'/'} target="_blank">
                         <i className="flaticon-skype"></i>
-                      </a>
+                      </Link>
                     </li>
                     <li className="p-0">
-                      <a className="nav-link p-0" href="#" target="_blank">
+                      <Link className="nav-link p-0" to={'/'} target="_blank">
                         <i className="flaticon-linkedin"></i>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -110,9 +111,9 @@ function Header() {
           <div className="row align-items-center">
             <div className="col-xl-2 col-lg-6 col-md-6 col-6">
               <div className="header-logo">
-                <a href="#">
+                <Link to={'/'}>
                   <img className="img-fluid" src={ logo_path } alt="Travello Logo" />
-                </a>
+                </Link>
               </div>
             </div>
             <div className="col-xl-7 d-none d-xl-flex justify-content-center">
@@ -120,57 +121,57 @@ function Header() {
                 <nav className="main-nav">
                   <ul className="main-list nav">
                     <li className="dropdown py-3 me-4">
-                      <a className="nav-link active dropdown-toggle ps-2 pe-4" href="#" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">
+                      <Link className="nav-link active dropdown-toggle ps-2 pe-4" to={'/'} data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">
                         Home
-                      </a>
+                      </Link>
                       <ul className="dropdown-menu">
-                        <li><a className="dropdown-item" href="#">Top Destinations</a></li>
-                        <li><a className="dropdown-item" href="#">About Us</a></li>
-                        <li><a className="dropdown-item" href="#">Tours</a></li>
-                        <li><a className="dropdown-item" href="#">Review</a></li>
-                        <li><a className="dropdown-item" href="#">Blog</a></li>
+                        <li><Link className="dropdown-item" to={'/#dest'}>Top Destinations</Link></li>
+                        <li><Link className="dropdown-item" to={'/#about'}>About Us</Link></li>
+                        <li><Link className="dropdown-item" to={'/#tours'}>Tours</Link></li>
+                        <li><Link className="dropdown-item" to={'/#review'}>Review</Link></li>
+                        <li><Link className="dropdown-item" to={'/#blog'}>Blog</Link></li>
                       </ul>
                     </li>
                     <li className="dropdown py-3 me-4">
-                      <a className="nav-link active dropdown-toggle ps-2 pe-4" href="#" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">
+                      <Link className="nav-link active dropdown-toggle ps-2 pe-4" to={'/tours'} data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">
                         Tours
-                      </a>
+                      </Link>
                       <ul className="dropdown-menu">
-                        <li><a className="dropdown-item" href="tour-grid.html">Tour</a></li>
-                        <li><a className="dropdown-item" href="#">Tour Singe</a></li>
+                        <li><Link className="dropdown-item" to={'/tours'}>Tour</Link></li>
+                        <li><Link className="dropdown-item" to={'/tours'}>Tour Singe</Link></li>
                       </ul>
                     </li>
                     <li className="dropdown py-3 me-4">
-                      <a className="nav-link active dropdown-toggle ps-2 pe-4" href="#" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">
+                      <Link className="nav-link active dropdown-toggle ps-2 pe-4" to={'/'} data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">
                         Pages
-                      </a>
+                      </Link>
                       <ul className="dropdown-menu">
-                        <li><a className="dropdown-item" href="#">About</a></li>
-                        <li><a className="dropdown-item" href="#">Event Grid</a></li>
-                        <li><a className="dropdown-item" href="#">Event List</a></li>
-                        <li><a className="dropdown-item" href="#">Event Details</a></li>
-                        <li><a className="dropdown-item" href="#">Prtfolio</a></li>
-                        <li><a className="dropdown-item" href="#">Gallery</a></li>
-                        <li><a className="dropdown-item" href="#">Team</a></li>
-                        <li><a className="dropdown-item" href="#">Team Details</a></li>
-                        <li><a className="dropdown-item" href="#">Testimonial</a></li>
-                        <li><a className="dropdown-item" href="#">Shop</a></li>
-                        <li><a className="dropdown-item" href="#">Shop Details</a></li>
-                        <li><a className="dropdown-item" href="#">Cart</a></li>
-                        <li><a className="dropdown-item" href="#">Checkout</a></li>
-                        <li><a className="dropdown-item" href="#">Sign In</a></li>
-                        <li><a className="dropdown-item" href="#">Sign Up</a></li>
-                        <li><a className="dropdown-item" href="#">Error</a></li>
+                        <li><Link className="dropdown-item" to={'/about'}>About</Link></li>
+                        <li><Link className="dropdown-item" to={'/'}>Event Grid</Link></li>
+                        <li><Link className="dropdown-item" to={'/'}>Event List</Link></li>
+                        <li><Link className="dropdown-item" to={'/'}>Event Details</Link></li>
+                        <li><Link className="dropdown-item" to={'/'}>Portfolio</Link></li>
+                        <li><Link className="dropdown-item" to={'/'}>Gallery</Link></li>
+                        <li><Link className="dropdown-item" to={'/'}>Team</Link></li>
+                        <li><Link className="dropdown-item" to={'/'}>Team Details</Link></li>
+                        <li><Link className="dropdown-item" to={'/'}>Testimonial</Link></li>
+                        <li><Link className="dropdown-item" to={'/'}>Shop</Link></li>
+                        <li><Link className="dropdown-item" to={'/'}>Shop Details</Link></li>
+                        <li><Link className="dropdown-item" to={'/'}>Cart</Link></li>
+                        <li><Link className="dropdown-item" to={'/'}>Checkout</Link></li>
+                        <li><Link className="dropdown-item" to={'/'}>Sign In</Link></li>
+                        <li><Link className="dropdown-item" to={'/'}>Sign Up</Link></li>
+                        <li><Link className="dropdown-item" to={'/'}>Error</Link></li>
                       </ul>
                     </li>
                     <li className="py-3 me-4">
-                      <a className="nav-link px-2" href="#">Destination</a>
+                      <Link className="nav-link px-2" to={'/'}>Destination</Link>
                     </li>
                     <li className="py-3 me-4">
-                      <a className="nav-link px-2" href="#">Blog</a>
+                      <Link className="nav-link px-2" to={'/posts'}>Blog</Link>
                     </li>
                     <li className="py-3">
-                      <a className="nav-link px-2" href="#">Contact</a>
+                      <Link className="nav-link px-2" to={'/'}>Contact</Link>
                     </li>
                   </ul>
                 </nav>
@@ -182,10 +183,10 @@ function Header() {
                   <button className="btn p-2"><i className="flaticon-search-interface-symbol"></i></button>
                 </div>
                 <div className="shop-icon-holder me-4 me-xl-4 d-none d-md-block">
-                  <a href="#" className="btn border rounded-circle px-2 py-1"><i className="flaticon-bag"></i></a>
+                  <Link to={'/'} className="btn border rounded-circle px-2 py-1"><i className="flaticon-bag"></i></Link>
                 </div>
                 <div className="contact-btn-holder me-4 me-xl-0 d-none d-md-block">
-                  <a href="#" className="btn btn-secondary p-3">Contact Us</a>
+                  <Link to={'/'} className="btn btn-secondary p-3">Contact Us</Link>
                 </div>
                 <div className="menu-toggler-btn-holder d-xl-none">
                   <button className="btn btn-secondary p-3">
