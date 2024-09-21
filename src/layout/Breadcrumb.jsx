@@ -15,7 +15,7 @@ function Breadcrumb({ pageName }) {
       <nav className="breadcrumb-menu p-3 rounded-3 sec-bg" aria-label="breadcrumb">
         <ol className="breadcrumb m-0 p-0 flex-nowrap">
           <li className="breadcrumb-item"><Link to={'/'}>Home</Link></li>
-          <li className="breadcrumb-item" aria-current="page">Tour</li>
+          <li className="breadcrumb-item" aria-current="page">{ pageName }</li>
         </ol>
       </nav>
     </section>

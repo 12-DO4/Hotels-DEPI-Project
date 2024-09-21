@@ -110,7 +110,7 @@ function Header() {
           <div className="row align-items-center">
             <div className="col-xl-2 col-lg-6 col-md-6 col-6">
               <div className="header-logo">
-                <a href="index.html">
+                <a href="#">
                   <img className="img-fluid" src={ logo_path } alt="Travello Logo" />
                 </a>
               </div>
@@ -124,11 +124,11 @@ function Header() {
                         Home
                       </a>
                       <ul className="dropdown-menu">
-                        <li><a className="dropdown-item" href="#dest">Top Destinations</a></li>
-                        <li><a className="dropdown-item" href="#about">About Us</a></li>
-                        <li><a className="dropdown-item" href="#tours">Tours</a></li>
-                        <li><a className="dropdown-item" href="#review">Review</a></li>
-                        <li><a className="dropdown-item" href="#blog">Blog</a></li>
+                        <li><a className="dropdown-item" href="#">Top Destinations</a></li>
+                        <li><a className="dropdown-item" href="#">About Us</a></li>
+                        <li><a className="dropdown-item" href="#">Tours</a></li>
+                        <li><a className="dropdown-item" href="#">Review</a></li>
+                        <li><a className="dropdown-item" href="#">Blog</a></li>
                       </ul>
                     </li>
                     <li className="dropdown py-3 me-4">

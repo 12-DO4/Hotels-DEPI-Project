@@ -3,7 +3,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { fetchTravelDetails } from "../APIs/travelsApi";
 import img from '../assets/imgs/discover-1.jpg';
-import  Breadcrumb  from "../layout/Breadcrumb";
+import Breadcrumb from "../layout/Breadcrumb";
+import Tooltip from 'react-bootstrap/Tooltip';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import PageNums from "../layout/PageNums";
 
 
@@ -19,6 +21,7 @@ function TourDetails() {
   useEffect(() => {
     dispatch(fetchTravelDetails(params.id));
   }, []);
+
   return (
     <>
       <Breadcrumb pageName={ currentTravel.title } />
@@ -41,7 +44,11 @@ function TourDetails() {
                     <span>(1.5k review)</span>
                   </div>
                 </div>
-                <h2 className="h1 tour-title text-truncate col-8 col-md-10 my-4" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Discovery island kayak Tour">{ currentTravel.title }</h2>
+                <OverlayTrigger delay={{ hide: 450, show: 300 }} overlay={(props) => (
+                  <Tooltip {...props}>{ currentTravel.title }</Tooltip>
+                )} placement="bottom">
+                  <h2 className="h1 tour-title text-truncate col-8 col-md-10 my-4">{ currentTravel.title }</h2>
+                </OverlayTrigger>
                 <div className="tour-info">
                   <ul className="nav navbar justify-content-start">
                     <li className="nav-item d-flex align-items-start me-5 mb-3 mb-sm-0">
@@ -160,8 +167,11 @@ function TourDetails() {
                               <div className="col-auto">
                                 <label htmlFor="adults" className="col-form-label">
                                   <small>
-                                    Adults
-                                    <i className="fa-solid fa-circle-info text-secondary"data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="(18+years)"></i>
+                                    Adults <OverlayTrigger delay={{ hide: 450, show: 300 }} overlay={(props) => (
+                                      <Tooltip {...props}>18+ years</Tooltip>
+                                    )} placement="bottom">
+                                      <i className="fa-solid fa-circle-info text-secondary"></i>
+                                    </OverlayTrigger>
                                   </small>
                                 </label>
                               </div>
@@ -177,8 +187,11 @@ function TourDetails() {
                               <div className="col-auto">
                                 <label htmlFor="kids" className="col-form-label">
                                   <small>
-                                    Kids
-                                    <i className="fa-solid fa-circle-info text-secondary"data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="(13years)"></i>
+                                    Kids <OverlayTrigger delay={{ hide: 450, show: 300 }} overlay={(props) => (
+                                      <Tooltip {...props}>13+ years</Tooltip>
+                                    )} placement="bottom">
+                                      <i className="fa-solid fa-circle-info text-secondary"></i>
+                                    </OverlayTrigger>
                                   </small>
                                 </label>
                               </div>
@@ -194,8 +207,11 @@ function TourDetails() {
                               <div className="col-auto">
                                 <label htmlFor="children" className="col-form-label">
                                   <small>
-                                    Children
-                                    <i className="fa-solid fa-circle-info text-secondary"data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="(5+years)"></i>
+                                    Children <OverlayTrigger delay={{ hide: 450, show: 300 }} overlay={(props) => (
+                                      <Tooltip {...props}>5+ years</Tooltip>
+                                    )} placement="bottom">
+                                      <i className="fa-solid fa-circle-info text-secondary"></i>
+                                    </OverlayTrigger>
                                   </small>
                                 </label>
                               </div>

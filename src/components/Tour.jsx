@@ -16,11 +16,11 @@ function Tour() {
   useEffect(() => {
     dispatch(fetchTravels());
   }, []);
-  console.log(travels);
 
   return (
     <>
       <Breadcrumb pageName={"Tour"} />
+      
       <section className="tours p-rel pt-5">
         <div className="container mt-5">
           <div className="row cards row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 px-3 px-md-0">
@@ -32,6 +32,7 @@ function Tour() {
           </div>
         </div>
       </section>
+      
       <PageNums />
     </>
   );

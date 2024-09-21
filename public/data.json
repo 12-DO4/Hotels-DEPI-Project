@@ -75,47 +75,85 @@
       "availableSeats": 6
     }
   },
-  "blogPosts": {
+  "posts": [
+    {
+      "id": 1,
+      "date": "March 28, 2023",
+      "comments": 22,
+      "title": "You should see things when visiting Japan",
+      "imgSrc": "b-1-1.jpg"
+    },
+    {
+      "id": 2,
+      "date": "June 7, 2023",
+      "comments": 70,
+      "title": "A place where start new life with adventure travel",
+      "imgSrc": "b-1-2.jpg"
+    },
+    {
+      "id": 3,
+      "date": "May 19, 2023",
+      "comments": 10,
+      "title": "A place where start new life with adventure Dhaka",
+      "imgSrc": "b-1-3.jpg"
+    },
+    {
+      "id": 4,
+      "date": "April 10, 2023",
+      "comments": 4,
+      "title": "Explore the wild beauty of Amazon rainforest",
+      "imgSrc": "b-1-4.jpg"
+    },
+    {
+      "id": 5,
+      "date": "July 15, 2023",
+      "comments": 11,
+      "title": "Relax at the tropical beaches of Bali",
+      "imgSrc": "b-1-5.jpg"
+    },
+    {
+      "id": 6,
+      "date": "November 20, 2023",
+      "comments": 9,
+      "title": "Experience thrilling hiking in the Himalayas",
+      "imgSrc": "b-1-6.jpg"
+    }
+  ],
+  "postPreview": {
     "1": {
       "date": "March 28, 2023",
-      "comments": 2,
+      "comments": 22,
       "title": "You should see things when visiting Japan",
-      "image": "b-1-1",
       "description": "Japan offers a unique blend of tradition and modernity. From its historic temples to cutting-edge technology hubs, there's something for every adventurer."
     },
     "2": {
       "date": "June 7, 2023",
-      "comments": 2,
+      "comments": 70,
       "title": "A place where start new life with adventure travel",
-      "image": "b-1-2",
       "description": "Embark on an unforgettable city tour filled with cultural landmarks, vibrant street markets, and a journey that will change your perspective on urban adventures."
     },
     "3": {
       "date": "May 19, 2023",
-      "comments": 2,
+      "comments": 10,
       "title": "A place where start new life with adventure Dhaka",
-      "image": "b-1-3",
       "description": "Discover the lively streets of Dhaka, a city brimming with life, rich in history, and full of opportunities to start fresh in a thriving urban landscape."
     },
     "4": {
       "date": "April 10, 2023",
       "comments": 4,
       "title": "Explore the wild beauty of Amazon rainforest",
-      "image": "b-1-4",
       "description": "Dive deep into the heart of the Amazon Rainforest. Experience the untouched wilderness, exotic wildlife, and a journey through nature's most powerful ecosystem."
     },
     "5": {
       "date": "July 15, 2023",
-      "comments": 1,
+      "comments": 11,
       "title": "Relax at the tropical beaches of Bali",
-      "image": "b-1-5",
       "description": "Bask in the sun on the pristine beaches of Bali. Whether you're looking to surf, relax, or explore the island's rich culture, Bali offers the perfect escape."
     },
     "6": {
       "date": "November 20, 2023",
-      "comments": 3,
+      "comments": 9,
       "title": "Experience thrilling hiking in the Himalayas",
-      "image": "b-1-6",
       "description": "Challenge yourself with a hiking adventure through the majestic Himalayas. Feel the thrill of conquering peaks while surrounded by breathtaking landscapes."
     }
   }

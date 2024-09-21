@@ -4,8 +4,7 @@ import { travelData } from "../components/Tour";
 import { Link } from "react-router-dom";
 
 function Card() {
-  const travel = useContext(travelData);
-  console.log("the key ", travel[1], "of travel ", travel);
+  let travel = useContext(travelData);
   return (
     <div className="col">
       <div className="card rounded-4 overflow-hidden border-0 shadow-lg" key={travel[1]}>
