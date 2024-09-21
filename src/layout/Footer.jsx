@@ -73,10 +73,10 @@ function Footer() {
               <h3 className="h5 mb-4">Subscribe Newsletter:</h3>
               <form id="regForm" className="row g-3">
                 <div className="email-input-field col-8 col-md-6 col-md-12">
-                  <input type="email" className="form-control" id="email" name="email" placeholder="Enter your Email:" />
+                  <input type="email" className="form-control p-3" id="email" name="email" placeholder="Enter your Email:" />
                 </div>
                 <div clasfs="submit-btn-holder col-8 col-md-6 col-md-12">
-                  <button className="btn btn-secondary" type="submit">Subscribe Now</button>
+                  <button className="btn btn-secondary p-3" type="submit">Subscribe Now</button>
                 </div>
               </form>
             </div>

@@ -5,6 +5,7 @@ import flag_egypt_path from "../assets/imgs/flag-egypt.png"
 import flag_spanish_path from "../assets/imgs/flag-spain.png"
 import flag_usa_path from "../assets/imgs/flag-usa.png"
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link';
 
 function Header() {
   return (
@@ -125,11 +126,11 @@ function Header() {
                         Home
                       </Link>
                       <ul className="dropdown-menu">
-                        <li><Link className="dropdown-item" to={'/#dest'}>Top Destinations</Link></li>
-                        <li><Link className="dropdown-item" to={'/#about'}>About Us</Link></li>
-                        <li><Link className="dropdown-item" to={'/#tours'}>Tours</Link></li>
-                        <li><Link className="dropdown-item" to={'/#review'}>Review</Link></li>
-                        <li><Link className="dropdown-item" to={'/#blog'}>Blog</Link></li>
+                        <li><HashLink className="dropdown-item" smooth to={'/#dest'}>Top Destinations</HashLink></li>
+                        <li><HashLink className="dropdown-item" smooth to={'/#about'}>About Us</HashLink></li>
+                        <li><HashLink className="dropdown-item" smooth to={'/#tours'}>Tours</HashLink></li>
+                        <li><HashLink className="dropdown-item" smooth to={'/#review'}>Review</HashLink></li>
+                        <li><HashLink className="dropdown-item" smooth to={'/#blog'}>Blog</HashLink></li>
                       </ul>
                     </li>
                     <li className="dropdown py-3 me-4">

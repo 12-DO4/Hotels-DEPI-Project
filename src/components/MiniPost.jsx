@@ -1,4 +1,7 @@
 import React from 'react'
+import post1_mini_img from "../assets/imgs/post-mini-1.jpg"
+import post2_mini_img from "../assets/imgs/post-mini-2.jpg"
+import post3_mini_img from "../assets/imgs/post-mini-3.jpg"
 
 function MiniPost() {
   return (
@@ -7,7 +10,7 @@ function MiniPost() {
         <div class="row align-items-center">
           <div class="col-4">
             <div class="post-mini-img-holder">
-              <img src="./assets/imgs/post-mini-1.jpg" class="img-fluid" alt="post1 mini img" />
+              <img src={ post1_mini_img } class="img-fluid" alt="post1 mini img" />
             </div>
           </div>
           <div class="col-8">
@@ -30,7 +33,7 @@ function MiniPost() {
         <div class="row align-items-center">
           <div class="col-4">
             <div class="post-mini-img-holder">
-              <img src="./assets/imgs/post-mini-2.jpg" class="img-fluid" alt="post1 mini img" />
+              <img src={ post2_mini_img } class="img-fluid" alt="post1 mini img" />
             </div>
           </div>
           <div class="col-8">
@@ -53,7 +56,7 @@ function MiniPost() {
         <div class="row align-items-center">
           <div class="col-4">
             <div class="post-mini-img-holder">
-              <img src="./assets/imgs/post-mini-3.jpg" class="img-fluid" alt="post1 mini img" />
+              <img src={ post3_mini_img } class="img-fluid" alt="post1 mini img" />
             </div>
           </div>
           <div class="col-8">

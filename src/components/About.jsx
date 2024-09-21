@@ -1,6 +1,7 @@
 import React from "react";
 import "../assets/css/about-page.css";
 import Header from '../layout/Header'
+import Breadcrumb from "../layout/Breadcrumb";
 import Footer from '../layout/Footer'
 import BtnTop from '../layout/BtnTop'
 import about_img1 from "../assets/imgs/about-1.jpg";
@@ -19,14 +20,8 @@ function About() {
       <Header />
 
       <main>
-        <div className="about-us-section">
-          <div className="about-us-boxtitle">
-            <h3>About US</h3>
-          </div>
-        </div>
-        <div className="about-us-boxbtn">
-          <button className="about-us-button">Home // About Us</button>
-        </div>
+      <Breadcrumb pageName={"About Us"} />
+
         <div className="second-section">
           <div className="left">
             <span className="imgone">

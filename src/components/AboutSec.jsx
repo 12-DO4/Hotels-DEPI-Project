@@ -3,6 +3,7 @@ import '../assets/css/about-sec.css'
 import firstImg from '../assets/imgs/about-1.jpg'
 import secondImg from '../assets/imgs/about-2.jpg'
 import thirdImg from '../assets/imgs/about-3.jpg'
+import { Link } from 'react-router-dom'
 
 function AboutSec() {
   return (
@@ -54,7 +55,7 @@ function AboutSec() {
                       </div>
                     </li>
                   </ul>
-                  <button className="btn btn-secondary py-3 px-4">Discover More</button>
+                  <Link to={'/about'} className="btn btn-secondary py-3 px-4">Discover More</Link>
                 </div>
               </div>
             </div>
