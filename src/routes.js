@@ -1,5 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from './components/Home';
+import Dest from './components/Dest';
+import Contact from './components/Contact';
 import About from './components/About';
 import Tour from './components/Tour';
 import TourDetails from "./components/TourDetails";
@@ -16,6 +18,16 @@ export const router = createBrowserRouter([
   {
     path: '/about',
     element: <About />,
+    errorElement: <Err404 />
+  },
+  {
+    path: '/contact',
+    element: <Contact />,
+    errorElement: <Err404 />
+  },
+  {
+    path: '/dest',
+    element: <Dest />,
     errorElement: <Err404 />
   },
   {

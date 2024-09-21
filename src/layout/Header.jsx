@@ -139,7 +139,7 @@ function Header() {
                       </Link>
                       <ul className="dropdown-menu">
                         <li><Link className="dropdown-item" to={'/tours'}>Tour</Link></li>
-                        <li><Link className="dropdown-item" to={'/tours'}>Tour Singe</Link></li>
+                        <li><Link className="dropdown-item" to={'/tourDetails/1'}>Tour Singe</Link></li>
                       </ul>
                     </li>
                     <li className="dropdown py-3 me-4">
@@ -166,13 +166,13 @@ function Header() {
                       </ul>
                     </li>
                     <li className="py-3 me-4">
-                      <Link className="nav-link px-2" to={'/'}>Destination</Link>
+                      <Link className="nav-link px-2" to={'/dest'}>Destination</Link>
                     </li>
                     <li className="py-3 me-4">
                       <Link className="nav-link px-2" to={'/posts'}>Blog</Link>
                     </li>
                     <li className="py-3">
-                      <Link className="nav-link px-2" to={'/'}>Contact</Link>
+                      <Link className="nav-link px-2" to={'/contact'}>Contact</Link>
                     </li>
                   </ul>
                 </nav>

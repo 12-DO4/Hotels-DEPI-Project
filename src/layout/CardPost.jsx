@@ -2,20 +2,12 @@ import React, { useContext } from 'react'
 import '../assets/css/card.css'
 import { postsData } from "../components/Blog";
 import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 
 function CardPost() {
-  const location = useLocation();
   let post = useContext(postsData);
-  // if (location.pathname === "/") {
-  //   post = useContext(postsDataSec);
-  // }
-  // else if (location.pathname === "/tours") {
-  //   post = useContext(postsDataPage);
-  // }
   return (
-    <div className="col">
-      <div className="card rounded-4 overflow-hidden border-0 shadow-lg" key={ post[0].id }>
+    <div className="col" key={ post[1] }>
+      <div className="card rounded-4 overflow-hidden border-0 shadow-lg">
         <div className="card-img-holder p-rel">
           <div className="img-part">
             <img src={ "/assets/imgs/" + post[0].imgSrc } className="card-img-top" alt="blog image" />

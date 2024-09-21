@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 function Card() {
   let travel = useContext(travelData);
   return (
-    <div className="col">
-      <div className="card rounded-4 overflow-hidden border-0 shadow-lg" key={travel[1]}>
+    <div className="col" key={ travel[1] }>
+      <div className="card rounded-4 overflow-hidden border-0 shadow-lg">
         <div className="card-img-holder p-rel">
           <div className="img-part">
             <img src={"/assets/imgs/" + travel[0].imgSrc} className="card-img-top" alt="tours image" />
@@ -39,9 +39,7 @@ function Card() {
               <div className="price d-flex align-items-center">
                 <i className="flaticon-coin sec-clr me-1"></i>
                 <span>
-                  From
-                  <ins className="text-decoration-none prm-clr">$116.10</ins>
-                  <del>$116.10</del>
+                  From <ins className="text-decoration-none prm-clr">$116.10</ins> <del>$116.10</del>
                 </span>
               </div>
               <div className="review d-flex align-items-center">

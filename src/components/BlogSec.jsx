@@ -2,8 +2,8 @@ import React, { useEffect, createContext } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchPosts } from "../APIs/postsAPI";
 import CardPostSec from "../layout/CardPostSec";
-import "../assets/css/tours-sec.css";
 import "../assets/css/blog-sec.css";
+import blog_img1 from "../assets/imgs/animation-ticket.png"
 
 export const postsData = createContext();
 
@@ -16,20 +16,20 @@ function BlogSec() {
   }, []);
 
   return (
-    <section class="blog p-rel py-5" id="blog">
-      <div class="container my-5">
-        <div class="row justify-content-center align-items-center mb-5">
-          <div class="d-none d-xl-block col-md-3 moving-img-holder text-center">
-            <img src="./assets/imgs/animation-ticket.png" alt="" />
+    <section className="blog p-rel py-5" id="blog">
+      <div className="container my-5">
+        <div className="row justify-content-center align-items-center mb-5">
+          <div className="d-none d-xl-block col-md-3 moving-img-holder text-center">
+            <img src={ blog_img1 } alt="animation 5" />
           </div>
-          <div class="col-xl-6 main-heading text-center">
+          <div className="col-xl-6 main-heading text-center">
             <span>Our Resent Blog</span>
-            <h3 class="h1 m-0 mt-3">Amazing news & blog for every update</h3>
+            <h3 className="h1 m-0 mt-3">Amazing news & blog for every update</h3>
           </div>
         </div>
-        <div class="cards row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 px-3 px-md-0">
+        <div className="cards row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 px-3 px-md-0">
           {posts.map((post, index) => (
-            <postsData.Provider value={[post, index]}>
+            <postsData.Provider value={[post, index]} key={index}>
               <CardPostSec />
             </postsData.Provider>
           )).slice(0, 3)}
