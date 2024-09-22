@@ -1,8 +1,8 @@
 import React from "react";
-import Header from '../layout/Header'
+import Header from "../layout/Header";
 import Breadcrumb from "../layout/Breadcrumb";
-import Footer from '../layout/Footer'
-import BtnTop from '../layout/BtnTop'
+import Footer from "../layout/Footer";
+import BtnTop from "../layout/BtnTop";
 
 function Contact() {
   return (
@@ -19,7 +19,7 @@ function Contact() {
                     <div className="col">
                       <input
                         type="text"
-                        className="form-control"
+                        className="form-control p-3"
                         placeholder="First name:"
                         aria-label="First name"
                       />
@@ -27,7 +27,7 @@ function Contact() {
                     <div className="col">
                       <input
                         type="text"
-                        className="form-control"
+                        className="form-control p-3"
                         placeholder="Last name:"
                         aria-label="Last name"
                       />
@@ -37,7 +37,7 @@ function Contact() {
                     <div className="col">
                       <input
                         type="email"
-                        className="form-control"
+                        className="form-control p-3"
                         placeholder="Email:"
                         aria-label="Email"
                       />
@@ -45,7 +45,7 @@ function Contact() {
                     <div className="col">
                       <input
                         type="text"
-                        className="form-control"
+                        className="form-control p-3"
                         placeholder="Phone:"
                         aria-label="Phone"
                       />
@@ -55,14 +55,14 @@ function Contact() {
                     <div className="col">
                       <input
                         type="text"
-                        className="form-control"
+                        className="form-control p-3"
                         placeholder="Subject:"
                         aria-label="Subject"
                       />
                     </div>
                   </div>
                   <textarea
-                    className="form-control mb-4"
+                    className="form-control mb-4 p-3"
                     placeholder="Write A Message...."
                     style={{ height: "100px" }}
                   ></textarea>
@@ -98,9 +98,13 @@ function Contact() {
                           Call Us:
                         </span>
                         <span className="info-details text-white">
-                          <a href="tel:+0009873267" className="text-white">(+000) 987-3267</a>
+                          <a href="tel:+0009873267" className="text-white">
+                            (+000) 987-3267
+                          </a>
                           <br />
-                          <a href="tel:+88568956238" className="text-white">+88 568 956 238</a>
+                          <a href="tel:+88568956238" className="text-white">
+                            +88 568 956 238
+                          </a>
                         </span>
                       </div>
                     </li>
@@ -111,7 +115,10 @@ function Contact() {
                           Location:
                         </span>
                         <span className="info-details text-white">
-                          <a href="https://maps.app.goo.gl/DWfEzciQYb27HMyn7" className="text-white">
+                          <a
+                            href="https://maps.app.goo.gl/DWfEzciQYb27HMyn7"
+                            className="text-white"
+                          >
                             242 Carlyle RdZebulon, North Carolina(NC), 27597
                           </a>
                         </span>

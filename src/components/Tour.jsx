@@ -1,16 +1,16 @@
 import React, { useEffect, createContext } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { fetchTravels } from "../APIs/travelsApi";
 import Header from "../layout/Header";
-import Footer from "../layout/Footer";
-import BtnTop from "../layout/BtnTop";
 import Breadcrumb from "../layout/Breadcrumb";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchTravels } from "../APIs/travelsAPI";
 import Card from "../layout/Card";
 import "../assets/css/tours-sec.css";
 import "../assets/css/tours-page.css";
 import PageNums from "../layout/PageNums";
+import Footer from "../layout/Footer";
+import BtnTop from "../layout/BtnTop";
 
-export const travelData = createContext();
+export const travelsData = createContext();
 
 function Tour() {
   const travels = useSelector((state) => state.travelsData.travels);
@@ -31,9 +31,9 @@ function Tour() {
           <div className="container mt-5">
             <div className="row cards row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 px-3 px-md-0">
               {travels.map((travel, index) => (
-                <travelData.Provider value={[travel, index]}>
+                <travelsData.Provider value={[travel, index]} key={index}>
                   <Card />
-                </travelData.Provider>
+                </travelsData.Provider>
               ))}
             </div>
           </div>

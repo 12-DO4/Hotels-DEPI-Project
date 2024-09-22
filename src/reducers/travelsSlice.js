@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchTravels, fetchTravelDetails } from "../APIs/travelsApi";
+import { fetchTravels, fetchTravelDetails } from "../APIs/travelsAPI";
 
 export const travelsSlice = createSlice({
   name: "travelsData",
@@ -8,10 +8,26 @@ export const travelsSlice = createSlice({
     travels: [],
     travel: {
       title: "",
+      price: {
+        current: 0,
+        discount: 0
+      },
+      location: {
+        place: "",
+        zip: "",
+        country: "",
+        link: ""
+      },
+      rating: {
+        rate: 0,
+        review: 0
+      },
       description: "",
       duration: "",
-      price: 0,
+      maxGuests: 0,
       availableSeats: 0,
+      img: "",
+      type: ""
     },
   },
 

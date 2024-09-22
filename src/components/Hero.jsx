@@ -1,5 +1,5 @@
-import React from 'react'
-import "../assets/css/landing.css"
+import React from "react";
+import "../assets/css/landing.css";
 
 function Hero() {
   return (
@@ -13,7 +13,7 @@ function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

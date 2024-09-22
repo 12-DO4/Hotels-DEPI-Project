@@ -12,7 +12,6 @@ function Home() {
   return (
     <>
       <Header />
-
       <main>
         <Hero />
         <DestSec />
@@ -20,9 +19,7 @@ function Home() {
         <TourSec />
         <BlogSec />
       </main>
-
       <Footer />
-
       <BtnTop />
     </>
   );

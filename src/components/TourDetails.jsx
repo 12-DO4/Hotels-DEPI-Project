@@ -1,25 +1,24 @@
 import React, { useEffect, useState } from "react";
+import Header from "../layout/Header";
+import Breadcrumb from "../layout/Breadcrumb";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { fetchTravelDetails } from "../APIs/travelsApi";
-import Header from '../layout/Header'
-import Footer from '../layout/Footer'
-import BtnTop from '../layout/BtnTop'
-import img from "../assets/imgs/discover-1.jpg";
-import Breadcrumb from "../layout/Breadcrumb";
+import { fetchTravelDetails } from "../APIs/travelsAPI";
 import Tooltip from "react-bootstrap/Tooltip";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import PageNums from "../layout/PageNums";
+import Footer from "../layout/Footer";
+import BtnTop from "../layout/BtnTop";
 
 function TourDetails() {
   const [adultsCounter, setAdultsCounter] = useState(1);
   const [kidsCounter, setKidsCounter] = useState(1);
   const [childrenCounter, setChildrenCounter] = useState(1);
+
   const dispatch = useDispatch();
   const currentTravel = useSelector((state) => state.travelsData.travel);
-  console.log(currentTravel);
   const params = useParams();
-  //   const [price, setPrice] = useState(currentTravel.price);
+
   useEffect(() => {
     dispatch(fetchTravelDetails(params.id));
   }, []);
@@ -27,10 +26,8 @@ function TourDetails() {
   return (
     <>
       <Header />
-
       <main>
         <Breadcrumb pageName={currentTravel.title} />
-
         <section className="tours-details my-5 pt-5">
           <div className="container">
             <div className="row justify-content-between">
@@ -39,17 +36,29 @@ function TourDetails() {
                   <div className="row tour-location-review">
                     <div className="col-md-6 tour-location-details">
                       <a
-                        href="https://maps.app.goo.gl/Wy2i47R1k1XuRmXh8"
+                        href={currentTravel.location.link}
                         className="location d-flex align-items-center"
                       >
                         <i className="flaticon-maps-and-flags me-1 sec-clr"></i>
-                        <span>traford Park Lexington, 40507</span>
+                        <span>
+                          {currentTravel.location.place +
+                            ", " +
+                            currentTravel.location.zip}
+                        </span>
                       </a>
                     </div>
                     <div className="col-md-6 review d-flex justify-content-md-end align-items-center">
                       <i className="flaticon-star prm-clr me-1"></i>
-                      <span className="prm-clr me-1">4.5</span>
-                      <span>(1.5k review)</span>
+                      <span className="prm-clr me-1">
+                        {currentTravel.rating.rate}
+                      </span>
+                      <span>
+                        {"("}
+                        {currentTravel.rating.review >= 1000
+                          ? currentTravel.rating.review / 1000 + "k"
+                          : currentTravel.rating.review}
+                        {" review)"}
+                      </span>
                     </div>
                   </div>
                   <OverlayTrigger
@@ -70,7 +79,11 @@ function TourDetails() {
                         <div>
                           <div className="d-flex flex-column">
                             <span className="fw-bold text-secondary">From</span>
-                            <span>${currentTravel.price}</span>
+                            <ins className="text-decoration-none sec-clr fw-bold">
+                              {"$" +
+                                (1 - currentTravel.price.discount / 100) *
+                                  currentTravel.price.current}
+                            </ins>
                           </div>
                         </div>
                       </li>
@@ -81,7 +94,7 @@ function TourDetails() {
                             <span className="fw-bold text-secondary">
                               Duration
                             </span>
-                            <span>{currentTravel.duration}</span>
+                            <span className="sec-clr fw-bold">{currentTravel.duration}</span>
                           </div>
                         </div>
                       </li>
@@ -92,7 +105,7 @@ function TourDetails() {
                             <span className="fw-bold text-secondary">
                               Tour Type
                             </span>
-                            <span>{currentTravel.duration}</span>
+                            <span className="sec-clr fw-bold">{currentTravel.type}</span>
                           </div>
                         </div>
                       </li>
@@ -100,7 +113,7 @@ function TourDetails() {
                   </div>
                   <div className="tour-image rounded-4 overflow-hidden mt-5 mb-4">
                     <img
-                      src={img}
+                      src={"/assets/imgs/" + currentTravel.img}
                       className="img-fluid"
                       alt="Discovery island kayak"
                     />
@@ -244,7 +257,6 @@ function TourDetails() {
                                         e.preventDefault();
                                         if (adultsCounter > 0)
                                           setAdultsCounter(adultsCounter - 1);
-                                        console.log(adultsCounter);
                                       }}
                                     >
                                       -
@@ -254,6 +266,9 @@ function TourDetails() {
                                       id="adults"
                                       className="form-control-color text-center mx-1 amount"
                                       value={adultsCounter}
+                                      onChange={(e) => {
+                                        setAdultsCounter(e.target.value);
+                                      }}
                                     />
                                     <button
                                       className="btn btn-secondary increase p-1 fw-bolder"
@@ -306,6 +321,9 @@ function TourDetails() {
                                       id="kids"
                                       className="form-control-color text-center mx-1 amount"
                                       value={kidsCounter}
+                                      onChange={(e) => {
+                                        setKidsCounter(e.target.value);
+                                      }}
                                     />
                                     <button
                                       className="btn btn-secondary increase p-1 fw-bolder"
@@ -358,6 +376,9 @@ function TourDetails() {
                                       id="children"
                                       className="form-control-color text-center mx-1 amount"
                                       value={childrenCounter}
+                                      onChange={(e) => {
+                                        setChildrenCounter(e.target.value);
+                                      }}
                                     />
                                     <button
                                       className="btn btn-secondary increase p-1 fw-bolder"
@@ -446,7 +467,7 @@ function TourDetails() {
                           <div className="col-auto fs-5 fw-bold">
                             <span>Total Cost: </span>
                             <span className="sec-clr">
-                              ${currentTravel.price}
+                              ${currentTravel.price.current}
                             </span>
                             <span> / per person</span>
                           </div>
@@ -476,14 +497,18 @@ function TourDetails() {
                           <i className="fas fa-users fa-2x sec-clr me-4"></i>
                           <div className="d-flex flex-column">
                             <small className="text-secondary">Max Guests</small>
-                            <span className="fw-bold">5</span>
+                            <span className="fw-bold">
+                              {currentTravel.maxGuests}
+                            </span>
                           </div>
                         </li>
                         <li className="list-item d-flex align-items-center mb-3">
                           <i className="fas fa-users fa-2x sec-clr me-4"></i>
                           <div className="d-flex flex-column">
                             <small className="text-secondary">Min Age</small>
-                            <span className="fw-bold">12+</span>
+                            <span className="fw-bold">
+                              {currentTravel.minAge + "+"}
+                            </span>
                           </div>
                         </li>
                         <li className="list-item d-flex align-items-center mb-3">
@@ -492,7 +517,9 @@ function TourDetails() {
                             <small className="text-secondary">
                               Tour Location
                             </small>
-                            <span className="fw-bold">America</span>
+                            <span className="fw-bold">
+                              {currentTravel.location.country}
+                            </span>
                           </div>
                         </li>
                         <li className="list-item d-flex align-items-center">
@@ -501,7 +528,9 @@ function TourDetails() {
                             <small className="text-secondary">
                               Language Support
                             </small>
-                            <span className="fw-bold">Global</span>
+                            <span className="fw-bold">
+                              {currentTravel.language}
+                            </span>
                           </div>
                         </li>
                       </ul>
@@ -512,12 +541,9 @@ function TourDetails() {
             </div>
           </div>
         </section>
-
         <PageNums />
       </main>
-
       <Footer />
-
       <BtnTop />
     </>
   );

@@ -10,7 +10,9 @@ export const postsSlice = createSlice({
       date: "",
       comments: 0,
       title: "",
-      description: ""
+      description: "",
+      category: "",
+      img: ""
     },
   },
 
