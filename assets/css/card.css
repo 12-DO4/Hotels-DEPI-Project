@@ -1,0 +1,63 @@
+.cards .card .card-img-holder .img-part::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(22, 27, 24, 0.502);
+    z-index: 22;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.cards .card:hover .card-img-holder .img-part::after {
+    opacity: 1;
+}
+
+.cards .card .card-img-holder .img-part {
+    overflow: hidden;
+}
+
+.cards .card .card-img-holder .img-part img {
+    transition: 0.3s;
+}
+
+.cards .card:hover .card-img-holder .img-part img {
+    transform: scale(1.2);
+}
+
+.cards .card .badges {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 333;
+}
+
+.cards .card span[class*="-badge"] {
+    font-size: 10px;
+}
+
+.card-body-abs {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    z-index: 333;
+}
+
+.cards .card .card-body .card-title a {
+    font-size: 24px;
+    color: var(--black-bg);
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.cards .card .card-body-abs .card-title a {
+    color: white;
+}
+
+.cards .card .card-body .card-title a:hover {
+    color: var(--secondary-color);
+}
