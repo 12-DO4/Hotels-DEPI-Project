@@ -2,9 +2,8 @@ const Joi = require("joi");
 const path = require("path");
 Joi.objectId = require("joi-objectId")(Joi);
 const cors = require("cors");
-
 const travel = require("./routes/travel")
-
+const post= require("./routes/post")
 const express = require("express");
 const app = express();
 app.use(express.json());
@@ -32,9 +31,7 @@ app.use('/uploads', express.static('uploads'));
 
 //Travel route
 app.use("/travel", travel)
-
-
-
+app.use("/post",post)
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
