@@ -13,9 +13,8 @@ import BtnTop from "../layout/BtnTop";
 export const postsData = createContext();
 
 function Blog() {
-  const dispatch = useDispatch();
   const posts = useSelector((state) => state.postsData.posts);
-
+  const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchPosts());
   }, []);

@@ -2,12 +2,12 @@ const Joi = require("joi");
 const path = require("path");
 Joi.objectId = require("joi-objectId")(Joi);
 const cors = require("cors");
-
 const travel = require("./routes/travel")
-const post = require("./routes/post")
-const frontTravel = require('./routes/frontend/travel')
+const post= require("./routes/post")
 const express = require("express");
 const app = express();
+const frontPosts = require("./routes/frontend/post"); 
+const frontTravel = require("./routes/frontend/travel"); 
 app.use(express.json());
 
 
@@ -33,19 +33,18 @@ app.use(cors());
 
 //Travel route
 app.use("/travel", travel)
-app.use('/api/travel', frontTravel);
+app.use("/post",post)
 
-//Posts route
-app.use("/post", post)
-
-// for admin lte
 app.use('/adminlte', express.static(path.join(__dirname, 'node_modules', 'admin-lte')));
+app.set('view engine', 'ejs');
 
-// for font awesome
+app.get("/post/new", (req, res) => {
+  res.render("add_post");
+});
+app.use('/api/posts', frontPosts);
+app.use('/api/travel', frontTravel);
 app.use('/fontawesome', express.static(path.join(__dirname, 'node_modules', '@fortawesom', 'fontawesome-free')));
 
-// ejs engine
-app.set('view engine', 'ejs');
 
 app.get('/travel/new', (req, res) => {
   res.render("add_travel")

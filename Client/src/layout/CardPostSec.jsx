@@ -5,15 +5,23 @@ import { Link } from "react-router-dom";
 
 function CardPost() {
   let post = useContext(postsData);
+  const isoDate = post[0].date;
+  const date = new Date(isoDate);
+  
+  // Options for formatting the date
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  
+  // Convert to the desired format
+  const formattedDate = date.toLocaleDateString('en-US', options);
   return (
-    <div className="col" key={post[1]}>
+    <div className="col" key={post[0]._id}>
       <div className="card rounded-4 overflow-hidden border-0 shadow-lg">
         <div className="card-img-holder p-rel">
           <div className="img-part">
             <img
-              src={"/assets/imgs/" + post[0].imgSec}
+              src={`${process.env.REACT_APP_API_URL}/${post[0].Img}`}
               className="card-img-top"
-              alt={"blog image " + post[0].id}
+              alt={"blog image " + post[0]._id}
             />
           </div>
           <div className="badges">
@@ -26,7 +34,7 @@ function CardPost() {
           <div className="d-flex align-items-center mb-3 date-comments">
             <div className="date d-flex align-items-center me-3">
               <i className="flaticon-calendar sec-clr me-1"></i>
-              <span>{post[0].date}</span>
+              <span>{formattedDate}</span>
             </div>
             <div className="comments d-flex align-items-center">
               <i className="flaticon-chat sec-clr me-1"></i>
@@ -34,10 +42,10 @@ function CardPost() {
             </div>
           </div>
           <h3 className="card-title">
-            <Link to={"/postPreview/" + post[0].id}>{post[0].title}</Link>
+            <Link to={"/postPreview/" + post[0]._id}>{post[0].title}</Link>
           </h3>
           <Link
-            to={"/postPreview/" + post[0].id}
+            to={"/postPreview/" + post[0]._id}
             className="btn btn-secondary mt-3"
           >
             Explore More

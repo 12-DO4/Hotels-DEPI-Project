@@ -21,6 +21,14 @@ function BlogDetails() {
     dispatch(fetchPosts());
     dispatch(fetchPostPreview(params.id));
   }, [params.id]);
+  const isoDate = currentPost.date;
+  const date = new Date(isoDate);
+  
+  // Options for formatting the date
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  
+  // Convert to the desired format
+  const formattedDate = date.toLocaleDateString('en-US', options);
 
   return (
     <>
@@ -35,14 +43,14 @@ function BlogDetails() {
               <div className="col-lg-7">
                 <div className="post">
                   <div className="post-img rounded-3 overflow-hidden">
-                    <img src={"/assets/imgs/" + currentPost.img} alt="blog post details" />
+                    <img src={`${process.env.REACT_APP_API_URL}/${currentPost.Img}`} alt="blog post details" />
                   </div>
                   <div className="post-details">
                     <div className="post-info my-4">
                       <ul className="nav navbar justify-content-lg-start">
                         <li className="list-item d-flex align-items-center me-4">
                           <i className="flaticon-calendar sec-clr me-2"></i>
-                          <span>{currentPost.date}</span>
+                          <span>{formattedDate}</span>
                         </li>
                         <li className="list-item d-flex align-items-center">
                           <i className="flaticon-chat sec-clr me-2"></i>

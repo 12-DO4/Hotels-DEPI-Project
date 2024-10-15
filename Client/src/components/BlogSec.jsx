@@ -8,9 +8,8 @@ import anim_blog from "../assets/imgs/animation-ticket.png";
 export const postsData = createContext();
 
 function BlogSec() {
-  const dispatch = useDispatch();
   const posts = useSelector((state) => state.postsData.posts);
-
+  const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchPosts());
   }, []);
