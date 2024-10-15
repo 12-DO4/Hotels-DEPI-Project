@@ -36,7 +36,7 @@ export const router = createBrowserRouter([
     errorElement: <Err404 />
   },
   {
-    path: '/tourDetails/:id',
+    path: '/travel/:id',
     element: <TourDetails />,
     errorElement: <Err404 />
   },

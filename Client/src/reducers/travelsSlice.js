@@ -6,29 +6,7 @@ export const travelsSlice = createSlice({
 
   initialState: {
     travels: [],
-    travel: {
-      title: "",
-      price: {
-        current: 0,
-        discount: 0
-      },
-      location: {
-        place: "",
-        zip: "",
-        country: "",
-        link: ""
-      },
-      rating: {
-        rate: 0,
-        review: 0
-      },
-      description: "",
-      duration: "",
-      maxGuests: 0,
-      availableSeats: 0,
-      img: "",
-      type: ""
-    },
+    travel: {},
   },
 
   reducers: {},

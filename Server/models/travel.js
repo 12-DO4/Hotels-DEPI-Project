@@ -34,6 +34,25 @@ const travelSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
+    maxGuest: {
+        type: Number,
+        required: true,
+    },
+    discount: {
+        type: Number,
+    },
+    minAge: {
+        type: Number,
+        required: true,
+    },
+    travelType: {
+        type: String,
+        required: true,
+    },
+    location: {
+        type: String,
+        required: true,
+    },
     date: { type: Date, default: Date.now },
 });
 
@@ -47,6 +66,11 @@ function handleTravelValidation(travel) {
         description: Joi.string().min(20).max(300).required(),
         duration: Joi.number().required(),
         reservations: Joi.number().required(),
+        location: Joi.string().required().min(10).max(200),
+        discount: Joi.number(),
+        maxGuest: Joi.number().required(),
+        minAge: Joi.number().required(),
+        travelType: Joi.string().required().min(10).max(50),
     });
     return schema.validate(travel, { abortEarly: false });
 }

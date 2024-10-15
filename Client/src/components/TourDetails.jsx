@@ -18,7 +18,6 @@ function TourDetails() {
   const dispatch = useDispatch();
   const currentTravel = useSelector((state) => state.travelsData.travel);
   const params = useParams();
-
   useEffect(() => {
     dispatch(fetchTravelDetails(params.id));
   }, []);
@@ -27,7 +26,7 @@ function TourDetails() {
     <>
       <Header />
       <main>
-        <Breadcrumb pageName={currentTravel.title} />
+        <Breadcrumb pageName={currentTravel.name} />
         <section className="tours-details my-5 pt-5">
           <div className="container">
             <div className="row justify-content-between">
@@ -36,18 +35,18 @@ function TourDetails() {
                   <div className="row tour-location-review">
                     <div className="col-md-6 tour-location-details">
                       <a
-                        href={currentTravel.location.link}
+                        href={currentTravel.location}
                         className="location d-flex align-items-center"
                       >
                         <i className="flaticon-maps-and-flags me-1 sec-clr"></i>
                         <span>
-                          {currentTravel.location.place +
+                          {currentTravel.location +
                             ", " +
-                            currentTravel.location.zip}
+                            currentTravel.location}
                         </span>
                       </a>
                     </div>
-                    <div className="col-md-6 review d-flex justify-content-md-end align-items-center">
+                    {/* <div className="col-md-6 review d-flex justify-content-md-end align-items-center">
                       <i className="flaticon-star prm-clr me-1"></i>
                       <span className="prm-clr me-1">
                         {currentTravel.rating.rate}
@@ -59,17 +58,17 @@ function TourDetails() {
                           : currentTravel.rating.review}
                         {" review)"}
                       </span>
-                    </div>
+                    </div> */}
                   </div>
                   <OverlayTrigger
                     delay={{ hide: 450, show: 300 }}
                     overlay={(props) => (
-                      <Tooltip {...props}>{currentTravel.title}</Tooltip>
+                      <Tooltip {...props}>{currentTravel.name}</Tooltip>
                     )}
                     placement="bottom"
                   >
                     <h2 className="h1 tour-title text-truncate col-8 col-md-10 my-4">
-                      {currentTravel.title}
+                      {currentTravel.name}
                     </h2>
                   </OverlayTrigger>
                   <div className="tour-info">
@@ -81,8 +80,8 @@ function TourDetails() {
                             <span className="fw-bold text-secondary">From</span>
                             <ins className="text-decoration-none sec-clr fw-bold">
                               {"$" +
-                                (1 - currentTravel.price.discount / 100) *
-                                  currentTravel.price.current}
+                                (1 - parseInt(currentTravel.price) / 100) *
+                                  currentTravel.price}
                             </ins>
                           </div>
                         </div>
@@ -105,7 +104,7 @@ function TourDetails() {
                             <span className="fw-bold text-secondary">
                               Tour Type
                             </span>
-                            <span className="sec-clr fw-bold">{currentTravel.type}</span>
+                            <span className="sec-clr fw-bold">{currentTravel.travelType}</span>
                           </div>
                         </div>
                       </li>
@@ -113,7 +112,7 @@ function TourDetails() {
                   </div>
                   <div className="tour-image rounded-4 overflow-hidden mt-5 mb-4">
                     <img
-                      src={"/assets/imgs/" + currentTravel.img}
+                      src={`${process.env.REACT_APP_API_URL}/${currentTravel.coverImg}`}
                       className="img-fluid"
                       alt="Discovery island kayak"
                     />
@@ -467,7 +466,7 @@ function TourDetails() {
                           <div className="col-auto fs-5 fw-bold">
                             <span>Total Cost: </span>
                             <span className="sec-clr">
-                              ${currentTravel.price.current}
+                              ${currentTravel.price}
                             </span>
                             <span> / per person</span>
                           </div>
@@ -498,7 +497,7 @@ function TourDetails() {
                           <div className="d-flex flex-column">
                             <small className="text-secondary">Max Guests</small>
                             <span className="fw-bold">
-                              {currentTravel.maxGuests}
+                              {currentTravel.maxGuest}
                             </span>
                           </div>
                         </li>
@@ -518,7 +517,7 @@ function TourDetails() {
                               Tour Location
                             </small>
                             <span className="fw-bold">
-                              {currentTravel.location.country}
+                              {currentTravel.location}
                             </span>
                           </div>
                         </li>

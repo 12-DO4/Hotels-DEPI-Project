@@ -2,8 +2,10 @@ const Joi = require("joi");
 const path = require("path");
 Joi.objectId = require("joi-objectId")(Joi);
 const cors = require("cors");
+
 const travel = require("./routes/travel")
-const post= require("./routes/post")
+const post = require("./routes/post")
+const frontTravel = require('./routes/frontend/travel')
 const express = require("express");
 const app = express();
 app.use(express.json());
@@ -26,12 +28,28 @@ mongoose
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use('/uploads', express.static('uploads'));
-// app.use(cors());
+app.use(cors());
 
 
 //Travel route
 app.use("/travel", travel)
-app.use("/post",post)
+app.use('/api/travel', frontTravel);
+
+//Posts route
+app.use("/post", post)
+
+// for admin lte
+app.use('/adminlte', express.static(path.join(__dirname, 'node_modules', 'admin-lte')));
+
+// for font awesome
+app.use('/fontawesome', express.static(path.join(__dirname, 'node_modules', '@fortawesom', 'fontawesome-free')));
+
+// ejs engine
+app.set('view engine', 'ejs');
+
+app.get('/travel/new', (req, res) => {
+  res.render("add_travel")
+})
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {

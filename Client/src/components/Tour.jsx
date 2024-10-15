@@ -15,9 +15,9 @@ export const travelsData = createContext();
 function Tour() {
   const travels = useSelector((state) => state.travelsData.travels);
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(fetchTravels());
+    console.log(travels);
   }, []);
 
   return (

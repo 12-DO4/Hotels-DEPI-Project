@@ -1,14 +1,13 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const URL = '/data.json';
 
 export const fetchTravels = createAsyncThunk("travels/fetchTravels", async () => {
-    const response = await axios.get(URL);
-    return response.data["travels"];
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/travel`);
+    return response.data;
 });
 
 export const fetchTravelDetails = createAsyncThunk("travels/fetchTravelDetails", async (id) => {
-    const response = await axios.get(URL);
-    return response.data["travelDetails"][id];
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/travel/${id}`);
+    return response.data;
 });

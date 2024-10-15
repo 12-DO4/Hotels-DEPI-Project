@@ -5,15 +5,16 @@ import { Link } from "react-router-dom";
 
 function CardSec() {
   let travel = useContext(travelsData);
+  console.log(travel);
   return (
-    <div className="col" key={travel[1]}>
+    <div className="col" key={travel[0]._id}>
       <div className="card rounded-4 overflow-hidden border-0 shadow-lg">
         <div className="card-img-holder p-rel">
           <div className="img-part">
             <img
-              src={"/assets/imgs/" + travel[0].imgSec}
+              src={`${process.env.REACT_APP_API_URL}/${travel[0].coverImg}`}
               className="card-img-top"
-              alt={"tour image " + travel[0].id}
+              alt={"tour image " + travel[0]._id}
             />
           </div>
           <div className="overlay d-none"></div>
@@ -33,16 +34,16 @@ function CardSec() {
         </div>
         <div className="card-body p-3">
           <a
-            href={travel[0].location.link}
+            href={travel[0].location}
             className="location d-flex align-items-center"
           >
             <i className="flaticon-maps-and-flags me-1 sec-clr"></i>
             <span>
-              {travel[0].location.place + ", " + travel[0].location.zip}
+              {travel[0].location + ", " + travel[0].location}
             </span>
           </a>
           <h3 className="card-title mt-2 mb-3">
-            <Link to={"/tourDetails/" + travel[0].id}>{travel[0].title}</Link>
+            <Link to={"/travel/" + travel[0]._id}>{travel[0].name}</Link>
           </h3>
           <div className="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center review-price">
             <div className="price d-flex align-items-center">
@@ -50,22 +51,22 @@ function CardSec() {
               <span>
                 From
                 <ins className="text-decoration-none prm-clr">
-                  {" $" + (1 - travel[0].price.discount / 100) *
-                    travel[0].price.current}
+                  {" $" + (1 - travel[0].discount / 100) *
+                    travel[0].price}
                 </ins>{" "}
-                <del>{"$" + travel[0].price.current}</del>
+                <del>{"$" + travel[0].price}</del>
               </span>
             </div>
             <div className="review d-flex align-items-center">
               <i className="flaticon-star prm-clr me-1"></i>
-              <span className="prm-clr me-1">{travel[0].rating.rate}</span>
-              <span>
+              {/* <span className="prm-clr me-1">{travel[0].rating.rate}</span> */}
+              {/* <span>
                 {"("}
                 {travel[0].rating.review >= 1000
                   ? travel[0].rating.review / 1000 + "k"
                   : travel[0].rating.review}
                 {" review)"}
-              </span>
+              </span> */}
             </div>
           </div>
           <hr />
@@ -78,14 +79,14 @@ function CardSec() {
                 </li>
                 <li className="nav-item d-flex align-items-center people-reserved">
                   <i className="flaticon-user-1 sec-clr me-1"></i>
-                  <span>{travel[0].capacity - travel[0].reservations}</span>
+                  <span>{parseInt(travel[0].maxGuest) - parseInt(travel[0].reservations)}</span>
                 </li>
               </ul>
             </div>
             <div className="col-6 text-end">
               <Link
                 className="btn btn-secondary"
-                to={"/tourDetails/" + travel[0].id}
+                to={"/travel/" + travel[0]._id}
               >
                 Explore More
               </Link>
