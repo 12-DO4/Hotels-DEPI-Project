@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin travels</title>
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="/adminlte/dist/css/adminlte.min.css" />
+  </head>
+  <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
+    <!--begin::App Wrapper-->
+    <div class="app-wrapper">
+      <!--begin::Header-->
+      <nav class="app-header navbar navbar-expand bg-body">
+        <!--begin::Container-->
+        <div class="container-fluid"><!--begin::Start Navbar Links--></div>
+      </nav>
+
+      <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
+        <!--begin::Sidebar Brand-->
+        <div class="sidebar-brand">
+          <!--begin::Brand Link-->
+          <a href="/travel" class="brand-link">
+            <span class="brand-text fw-light">AdminLTE 4</span>
+            <!--end::Brand Text-->
+          </a>
+          <!--end::Brand Link-->
+        </div>
+        <!--end::Sidebar Brand-->
+        <!--begin::Sidebar Wrapper-->
+        <div class="sidebar-wrapper">
+          <nav class="mt-2">
+            <!--begin::Sidebar Menu-->
+            <ul
+              class="nav sidebar-menu flex-column"
+              data-lte-toggle="treeview"
+              role="menu"
+              data-accordion="false"
+            >
+              <li class="nav-item">
+                <a href="/post" class="nav-link">
+                  <i class="nav-icon bi bi-speedometer"></i>
+                  <p>
+                    Posts
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/post/new" class="nav-link">
+                  <i class="nav-icon bi bi-palette"></i>
+                  <p>add post</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/travel" class="nav-link">
+                  <i class="nav-icon bi bi-speedometer"></i>
+                  <p>
+                    Travels
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/travel/new" class="nav-link">
+                  <i class="nav-icon bi bi-palette"></i>
+                  <p>add travel</p>
+                </a>
+              </li>
+            </ul>
+            <!--end::Sidebar Menu-->
+          </nav>
+        </div>
+        <!--end::Sidebar Wrapper-->
+      </aside>
+
+      <main class="app-main">
+        <div class="app-content">
+          <!--begin::Container-->
+          <div class="container-fluid">
+            <!--begin::Row-->
+            <div class="row">
+                <h2 class="text-center">Travel Details</h2>
+            </div>
+            <div class="app-content">
+                <!--begin::Container-->
+                <div class="container-fluid">
+                   <!--begin::Row-->
+                   <div class="row g-4">
+                      <!--begin::Col-->
+                      <div class="col-md-6">
+                         <!--begin::Quick Example-->
+                         <div class="card card-primary card-outline mb-4">
+                            <div class="card-header">
+                               <div class="card-title"><%= travel.name %></div>
+                            </div>
+                            <!--end::Header--> <!--begin::Form-->
+                            <div class="card-body">
+                               <div class="mb-3">
+                                  <p><strong>Name:</strong>
+                                     <%= travel.name %>
+                                  </p>
+                                  <p><strong>Description:</strong>
+                                     <%= travel.description %>
+                                  </p>
+                                  <p><strong>Price:</strong> <%= travel.price %></p>
+                                  <p><strong>Discount:</strong> <%= travel.discount %></p>
+                                  <p><strong>Min age:</strong> <%= travel.minAge %></p>
+                                  <p><strong>Max Guest:</strong> <%= travel.maxGuest %></p>
+                                  <p><strong>Travel Type:</strong> <%= travel.travelType %></p>
+                                  <p><strong>Location:</strong> <%= travel.location %></p>
+                                  <p><strong>Duration:</strong> <%= travel.duration %></p>
+                                  <p><strong>Reservations:</strong> <%= travel.reservations %></p>
+                                  <a href="/travel" class="btn btn-primary">Back to Courses</a>
+                                  </div>
+                               </div>
+                              
+                               <!--end::Form-->
+                            </div>
+                         </div>
+                         <!--end::Col--> <!--begin::Col-->
+                      </div>
+                      <!--end::Row-->
+                   </div>
+                   <!--end::Container-->
+                </div>
+          </div>
+        </div>
+
+      </main>
+      <footer class="app-footer">
+        <div class="float-end d-none d-sm-inline">Anything you want</div>
+        <strong>
+          Copyright &copy; 2014-2024&nbsp;
+          <a href="https://adminlte.io" class="text-decoration-none"
+            >AdminLTE.io</a
+          >.
+        </strong>
+        All rights reserved.
+      </footer>
+    </div>
+    <script src="/adminlte/dist/js/adminlte.min.js"></script>
+  </body>
+</html>

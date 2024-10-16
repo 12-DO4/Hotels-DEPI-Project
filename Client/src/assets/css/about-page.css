@@ -1,0 +1,340 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow-x: hidden;
+}
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@font-face {
+  font-family: "GlossAndBloom";
+  src: url("../fonts/Gloss\ And\ Bloom\ Font.ttf") format("truetype");
+}
+
+.about-us-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../imgs/breadcrumb.jpg");
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-us-boxtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.about-us-boxtitle h3 {
+  font-family: "DM Sans";
+  font-weight: 700;
+  margin: 0;
+  font-size: 60px;
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+
+.about-us-boxbtn {
+  position: absolute;
+  top: 375px;
+  left: 850px;
+}
+.about-us-button {
+  color: #fff;
+  background-color: #11bb67;
+  display: inline-block;
+  padding: 18px 30px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-size: 18px;
+}
+.about-us-button:hover {
+  background-color: #10a058;
+}
+.second-section {
+  width: 100%;
+  height: 782px;
+  margin-top: 10px;
+  display: flex;
+}
+.left {
+  position: relative;
+  width: 50%;
+}
+.imgone {
+  position: absolute;
+  left: 400px;
+  top: 100px;
+}
+
+.imgtwo {
+  position: absolute;
+  left: 650px;
+  top: 200px;
+}
+
+.imgthree {
+  position: absolute;
+  left: 290px;
+  top: 350px;
+}
+.imgone img {
+  border-radius: 15px;
+}
+.imgtwo img {
+  border-radius: 15px;
+}
+.imgthree img {
+  border-radius: 15px;
+}
+.right {
+  width: 50%;
+  margin-top: 150px;
+}
+.orange {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+  display: inline-block;
+  color: #ff6525;
+  font-family: "GlossAndBloom";
+}
+.h2-title {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: #161b18;
+  width: 60%;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  font-family: "DM Sans";
+  font-weight: 700;
+}
+.p-title {
+  color: #6b6f6a;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 26px;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+  width: 60%;
+  font-family: "DM Sans";
+  font-weight: 500;
+}
+.stats {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.stat {
+  border-right: dashed 1px black;
+  width: 25%;
+}
+.stat h4 {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  font-family: "DM Sans";
+  font-weight: 900;
+}
+
+.stat p {
+  font-size: 14px;
+  margin-top: 7px;
+  color: #161b18;
+  font-family: "DM Sans";
+  font-weight: 500;
+}
+.button {
+  margin-top: 10px;
+  padding: 20px 30px;
+  background-color: #11bb67;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 186px;
+  transition: 0.5s;
+  font-family: "DM Sans";
+}
+.button:hover {
+  background-color: #10a058;
+}
+.third-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 618px;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  gap: 20px;
+  padding: 20px;
+}
+.content-third {
+  text-align: left;
+}
+.third-section-title {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: rgba(255, 255, 255, 1);
+  width: 50%;
+  margin-bottom: 10px;
+  vertical-align: middle;
+  font-family: "DM Sans";
+}
+.third-para {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 26px;
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  vertical-align: middle;
+  font-family: "DM Sans";
+}
+.third-btn {
+  background-color: #ff6525;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 186px;
+  margin-top: 10px;
+  padding: 20px 30px;
+  font-family: "DM Sans";
+  transition: 0.5s;
+}
+.third-btn:hover {
+  background-color: #11bb67;
+}
+.circle-link {
+  width: 100px;
+  height: 100px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-link a {
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 50%;
+  display: block;
+}
+
+.image-container img {
+  width: 200px;
+  margin-left: 70px;
+}
+.greenimg {
+  width: 7px;
+  height: 7px;
+  margin-right: 40px;
+}
+.forth-section {
+  margin-top: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 890px;
+}
+.left-forth {
+  width: 50%;
+}
+
+.p-forth {
+  width: 470px;
+  color: black;
+  margin-right: 50px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 26px;
+  margin-left: 41px;
+  margin-top: 20px;
+  font-family: "DM Sans";
+}
+.whatwedo {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+  display: inline-block;
+  color: #ff6525;
+  font-family: "GlossAndBloom";
+  margin-bottom: 15px;
+  margin-left: 43px;
+}
+.forth-title {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: black;
+  margin-left: 40px;
+  font-family: "DM Sans";
+}
+.forth-img {
+  border-radius: 7px;
+}
+.hline {
+  display: flex;
+}
+.kart {
+  width: 50%;
+  margin-left: 40px;
+}
+.p-row {
+  font-size: 16px;
+  font-family: "DM Sans";
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: #6b6f6a;
+  font-weight: 500;
+  width: 300px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.h-row {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+  font-family: "DM Sans";
+}
+.iconone,
+.icontwo,
+.iconthree,
+.iconfour {
+  width: 60px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
