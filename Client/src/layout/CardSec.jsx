@@ -51,8 +51,7 @@ function CardSec() {
               <span>
                 From
                 <ins className="text-decoration-none prm-clr">
-                  {" $" + (1 - travel[0].discount / 100) *
-                    travel[0].price}
+                {" $" + travel[0].discount}
                 </ins>{" "}
                 <del>{"$" + travel[0].price}</del>
               </span>

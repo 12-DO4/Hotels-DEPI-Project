@@ -55,7 +55,7 @@ function Card() {
                 <span>
                   From
                   <ins className="text-decoration-none prm-clr">
-                    {" $" + ((travel[0].price))}
+                    {" $" + travel[0].discount}
                   </ins>{" "}
                   <del>{" $" + travel[0].price}</del>
                 </span>

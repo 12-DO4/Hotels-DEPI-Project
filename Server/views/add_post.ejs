@@ -1,174 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Posts</title>
-    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="/adminlte/dist/css/adminlte.min.css">
-</head>
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="/adminlte/dist/css/adminlte.min.css" />
+  </head>
 
-<body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
+  <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
     <!--begin::App Wrapper-->
     <div class="app-wrapper">
-        <!--begin::Header-->
-        <nav class="app-header navbar navbar-expand bg-body"  style="min-height: 50px;">
-            <!--begin::Container-->
-            <div class="container-fluid">
-            </div>
-            <!--end::Container-->
-        </nav>
+      <!--begin::Header-->
+      <nav
+        class="app-header navbar navbar-expand bg-body"
+        style="min-height: 50px"
+      >
+        <!--begin::Container-->
+        <div class="container-fluid"></div>
+        <!--end::Container-->
+      </nav>
 
-
-        <!--end::Header--> <!--begin::Sidebar-->
-        <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
-            <!--begin::Sidebar Brand-->
-            <div class="sidebar-brand">
-                <!--begin::Brand Link-->
-                <a href="/post" class="brand-link">
-                    <span class="brand-text fw-light">AdminLTE 4</span> <!--end::Brand Text-->
+      <!--end::Header-->
+      <!--begin::Sidebar-->
+      <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
+        <!--begin::Sidebar Brand-->
+        <div class="sidebar-brand">
+          <!--begin::Brand Link-->
+          <a href="/post" class="brand-link">
+            <span class="brand-text fw-light">AdminLTE 4</span>
+            <!--end::Brand Text-->
+          </a>
+          <!--end::Brand Link-->
+        </div>
+        <!--end::Sidebar Brand-->
+        <!--begin::Sidebar Wrapper-->
+        <div class="sidebar-wrapper">
+          <nav class="mt-2">
+            <!--begin::Sidebar Menu-->
+            <ul
+              class="nav sidebar-menu flex-column"
+              data-lte-toggle="treeview"
+              role="menu"
+              data-accordion="false"
+            >
+              <li class="nav-item">
+                <a href="/post" class="nav-link">
+                  <i class="nav-icon bi bi-speedometer"></i>
+                  <p>
+                    Posts
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
                 </a>
-                <!--end::Brand Link-->
-            </div>
-            <!--end::Sidebar Brand--> <!--begin::Sidebar Wrapper-->
-            <div class="sidebar-wrapper">
-                <nav class="mt-2">
-                    <!--begin::Sidebar Menu-->
-                    <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu"
-                        data-accordion="false">
-                        <li class="nav-item">
-                            <a href="/post" class="nav-link">
-                                <i class="nav-icon bi bi-speedometer"></i>
-                                <p>
-                                    Posts
-                                    <i class="nav-arrow bi bi-chevron-right"></i>
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/post/new" class="nav-link">
-                                <i class="nav-icon bi bi-palette"></i>
-                                <p>add post</p>
-                            </a>
-                        </li>
-                    </ul>
-                    <!--end::Sidebar Menu-->
-                </nav>
-            </div>
-            <!--end::Sidebar Wrapper-->
-        </aside>
+              </li>
+              <li class="nav-item">
+                <a href="/post/new" class="nav-link">
+                  <i class="nav-icon bi bi-palette"></i>
+                  <p>add post</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/travel" class="nav-link">
+                  <i class="nav-icon bi bi-speedometer"></i>
+                  <p>
+                    Travels
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/travel/new" class="nav-link">
+                  <i class="nav-icon bi bi-palette"></i>
+                  <p>add travel</p>
+                </a>
+              </li>
+            </ul>
+            <!--end::Sidebar Menu-->
+          </nav>
+        </div>
+        <!--end::Sidebar Wrapper-->
+      </aside>
 
+      <!--end::Sidebar-->
+      <!--begin::App Main-->
+      <main class="app-main">
+        <!--begin::App Content Header-->
+        <div class="app-content-header">
+          <!--begin::Container-->
+          <div class="container-fluid">
+            <!--begin::Row-->
+            <div class="row">
+              <div class="col-sm-6">
+                <h3 class="mb-0">Adding Post</h3>
+              </div>
+              <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Adding Post
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="app-content">
+          <!--begin::Container-->
+          <div class="container-fluid">
+            <!--begin::Row-->
+            <div class="row g-4">
+              <!--begin::Col-->
+              <div class="col-md-6">
+                <!--begin::Quick Example-->
+                <div class="card card-primary card-outline mb-4">
+                  <div class="card-header">
+                    <div class="card-title">Adding Post</div>
+                  </div>
+                  <!--end::Header-->
+                  <!--begin::Form-->
+                  <form
+                    action="/post"
+                    method="POST"
+                    enctype="multipart/form-data"
+                  >
+                    <div class="card-body">
+                      <!-- Display Error Messages -->
+                      <% if (errors.length> 0) { %>
+                      <div class="alert alert-danger">
+                        <ul>
+                          <% errors.forEach(function(error) { %>
+                          <li><%= error %></li>
+                          <% }) %>
+                        </ul>
+                      </div>
+                      <% } %>
+                      <div class="mb-3">
+                        <div class="form-group">
+                          <label for="name">Post Title</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="title"
+                            name="title"
+                            required
+                            minlength="5"
+                            value="<%= post.title || '' %>"
+                          />
+                        </div>
+                      </div>
 
-        <!--end::Sidebar--> <!--begin::App Main-->
-        <main class="app-main">
-            <!--begin::App Content Header-->
-            <div class="app-content-header">
-                <!--begin::Container-->
-                <div class="container-fluid">
-                    <!--begin::Row-->
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <h3 class="mb-0">Adding Post</h3>
+                      <div class="mb-3">
+                        <div class="form-group">
+                          <label for="desc">Description</label>
+                          <textarea
+                            class="form-control"
+                            id="desc"
+                            name="description"
+                            cols="4"
+                            rows="6"
+                            required
+                            minlength="15"
+                          >
+<%= post.description || '' %></textarea
+                          >
                         </div>
-                        <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-end">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">
-                                    Adding Post
-                                </li>
-                            </ol>
+                      </div>
+
+                      <div class="mb-3">
+                        <div class="form-group">
+                          <label for="comments">Comments</label>
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="price\"
+                            name="comments"
+                            required
+                            value="<%= post.comments || '' %>"
+                          />
                         </div>
+                      </div>
+                      <div class="mb-3">
+                        <div class="form-group">
+                          <label for="PostImage">Post Image</label>
+                          <input
+                            type="file"
+                            class="form-control-file"
+                            id="PostImage"
+                            name="Img"
+                          />
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <button type="submit" class="btn btn-primary">
+                          Add Post
+                        </button>
+                      </div>
                     </div>
+                  </form>
+                  <!--end::Form-->
                 </div>
+              </div>
+              <!--end::Col-->
+              <!--begin::Col-->
             </div>
-            <div class="app-content">
-                <!--begin::Container-->
-                <div class="container-fluid">
-                    <!--begin::Row-->
-                    <div class="row g-4">
-                        <!--begin::Col-->
-                        <div class="col-md-6">
-                            <!--begin::Quick Example-->
-                            <div class="card card-primary card-outline mb-4">
-                                <div class="card-header">
-                                    <div class="card-title">Adding Post</div>
-                                </div>
-                                <!--end::Header--> <!--begin::Form-->
-                                <form action="/post" method="POST" enctype="multipart/form-data">
-                                    <div class="card-body">
+            <!--end::Row-->
+          </div>
+          <!--end::Container-->
+        </div>
+        <!--end::App Content-->
+      </main>
 
-                                        <!-- Display Error Messages -->
-                                        <% if (errors.length> 0) { %>
-                                            <div class="alert alert-danger">
-                                                <ul>
-                                                    <% errors.forEach(function(error) { %>
-                                                        <li>
-                                                            <%= error %>
-                                                        </li>
-                                                        <% }) %>
-                                                </ul>
-                                            </div>
-                                            <% } %>
-                                                <div class="mb-3">
-                                                    <div class="form-group">
-                                                        <label for="name">Post Title</label>
-                                                        <input type="text" class="form-control" id="title" name="title"
-                                                            required minlength="5" value="<%= post.title || '' %>">
-                                                    </div>
-                                                </div>
-
-                                                <div class="mb-3">
-                                                    <div class="form-group">
-                                                        <label for="desc">Description</label>
-                                                        <textarea class="form-control" id="desc" name="description"  cols="4" rows="6" required
-                                                            minlength="15"><%= post.description || '' %></textarea>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="mb-3">
-                                                    <div class="form-group">
-                                                        <label for="comments">Comments</label>
-                                                        <input type="number" class="form-control" id="price\"
-                                                            name="comments" required value="<%= post.comments || '' %>">
-                                                    </div>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <div class="form-group">
-                                                        <label for="PostImage">Post Image</label>
-                                                        <input type="file" class="form-control-file" id="PostImage"
-                                                            name="Img">
-                                                    </div>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <button type="submit" class="btn btn-primary">Add Post</button>
-                                                </div>
-                                    </div>
-                                </form>
-                                <!--end::Form-->
-                            </div>
-                        </div>
-                        <!--end::Col--> <!--begin::Col-->
-                    </div>
-                    <!--end::Row-->
-                </div>
-                <!--end::Container-->
-            </div>
-            <!--end::App Content-->
-        </main>
-
-
-        <!--end::App Main--> <!--begin::Footer-->
-        <footer class="app-footer">
-            <div class="float-end d-none d-sm-inline">Anything you want</div>
-            <strong>
-                Copyright &copy; 2014-2024&nbsp;
-                <a href="https://adminlte.io" class="text-decoration-none">AdminLTE.io</a>.
-            </strong>
-            All rights reserved.
-        </footer>
+      <!--end::App Main-->
+      <!--begin::Footer-->
+      <footer class="app-footer">
+        <div class="float-end d-none d-sm-inline">Anything you want</div>
+        <strong>
+          Copyright &copy; 2014-2024&nbsp;
+          <a href="https://adminlte.io" class="text-decoration-none"
+            >AdminLTE.io</a
+          >.
+        </strong>
+        All rights reserved.
+      </footer>
     </div>
     <script src="/adminlte/dist/js/adminlte.min.js"></script>
-</body>
-
+  </body>
 </html>

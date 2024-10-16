@@ -38,6 +38,21 @@
               data-accordion="false"
             >
               <li class="nav-item">
+                <a href="/post" class="nav-link">
+                  <i class="nav-icon bi bi-speedometer"></i>
+                  <p>
+                    Posts
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/post/new" class="nav-link">
+                  <i class="nav-icon bi bi-palette"></i>
+                  <p>add post</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="/travel" class="nav-link">
                   <i class="nav-icon bi bi-speedometer"></i>
                   <p>
@@ -65,24 +80,26 @@
           <div class="container-fluid">
             <!--begin::Row-->
             <div class="row">
-                <h2 class="text-center">Add Travel</h2>
+              <h2 class="text-center">Add Travel</h2>
             </div>
             <div class="row g-4">
               <!--begin::Col-->
-              <form action="/travel" method="POST" enctype="multipart/form-data">
+              <form
+                action="/travel"
+                method="POST"
+                enctype="multipart/form-data"
+              >
                 <!--begin::Body-->
                 <div class="card-body">
-                    <% if (errors.length> 0) { %>
-                        <div class="alert alert-danger">
-                            <ul>
-                                <% errors.forEach(function(error) { %>
-                                    <li>
-                                        <%= error %>
-                                    </li>
-                                <% }) %>
-                            </ul>
-                        </div>
-                    <% } %>
+                  <% if (errors.length> 0) { %>
+                  <div class="alert alert-danger">
+                    <ul>
+                      <% errors.forEach(function(error) { %>
+                      <li><%= error %></li>
+                      <% }) %>
+                    </ul>
+                  </div>
+                  <% } %>
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label"
                       >Travel Name</label
