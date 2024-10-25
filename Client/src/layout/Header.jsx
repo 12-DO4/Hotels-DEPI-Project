@@ -129,7 +129,7 @@ function Header() {
                         <li><HashLink className="dropdown-item" smooth to={'/#dest'}>Top Destinations</HashLink></li>
                         <li><HashLink className="dropdown-item" smooth to={'/#about'}>About Us</HashLink></li>
                         <li><HashLink className="dropdown-item" smooth to={'/#tours'}>Tours</HashLink></li>
-                        <li><HashLink className="dropdown-item" smooth to={'/#review'}>Review</HashLink></li>
+                        {/* <li><HashLink className="dropdown-item" smooth to={'/#review'}>Review</HashLink></li> */}
                         <li><HashLink className="dropdown-item" smooth to={'/#blog'}>Blog</HashLink></li>
                       </ul>
                     </li>
@@ -160,7 +160,7 @@ function Header() {
                         <li><Link className="dropdown-item" to={'/'}>Shop Details</Link></li>
                         <li><Link className="dropdown-item" to={'/'}>Cart</Link></li>
                         <li><Link className="dropdown-item" to={'/'}>Checkout</Link></li>
-                        <li><Link className="dropdown-item" to={'/'}>Sign In</Link></li>
+                        <li><Link className="dropdown-item" to={'http://localhost:5000/login'}>Sign In</Link></li>
                         <li><Link className="dropdown-item" to={'/'}>Sign Up</Link></li>
                         <li><Link className="dropdown-item" to={'/'}>Error</Link></li>
                       </ul>
@@ -187,7 +187,7 @@ function Header() {
                   <Link to={'/'} className="btn border rounded-circle px-2 py-1"><i className="flaticon-bag"></i></Link>
                 </div>
                 <div className="contact-btn-holder me-4 me-xl-0 d-none d-md-block">
-                  <Link to={'/'} className="btn btn-secondary p-3">Contact Us</Link>
+                  <Link className="btn btn-secondary p-3" to={'http://localhost:5000/login'}>Sign In</Link>
                 </div>
                 <div className="menu-toggler-btn-holder d-xl-none">
                   <button className="btn btn-secondary p-3">

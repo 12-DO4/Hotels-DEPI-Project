@@ -71,7 +71,7 @@ app.get("/login", (_req, res) => {
 });
 
 // running server
-const port = process.env.PORT || 5000;
+const port = +process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`your server listening on port ${port}`);
 });
