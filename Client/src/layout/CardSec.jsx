@@ -78,7 +78,7 @@ function CardSec() {
                 </li>
                 <li className="nav-item d-flex align-items-center people-reserved">
                   <i className="flaticon-user-1 sec-clr me-1"></i>
-                  <span>{parseInt(travel[0].maxGuest) - parseInt(travel[0].reservations)}</span>
+                  <span>{parseInt(travel[0].reservations)}</span>
                 </li>
               </ul>
             </div>

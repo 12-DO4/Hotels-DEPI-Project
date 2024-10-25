@@ -30,8 +30,6 @@ router.post("/addAdmin", async (req, res) => {
   user.password = await bcrypt.hash(user.password, salt);
   user.role = "admin";
 
-  console.log(await bcrypt.hash("123456789", salt))
-
   // Saving in db & Redirecting
   try {
     await user.save();
