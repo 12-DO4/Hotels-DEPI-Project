@@ -3,7 +3,6 @@ const router = express.Router();
 const { User } = require("../models/User");
 const Joi = require("joi");
 const bcrypt = require("bcrypt");
-const _ = require("lodash");
 
 router.post("/", async (req, res) => {
   // running validation on body request

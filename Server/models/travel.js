@@ -12,10 +12,6 @@ const travelSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
-    travelImg: {
-        type: String,
-        required: false,
-    },
     coverImg: {
         type: String,
         required: true,
@@ -66,11 +62,11 @@ function handleTravelValidation(travel) {
         description: Joi.string().min(20).max(300).required(),
         duration: Joi.number().required(),
         reservations: Joi.number().required(),
-        location: Joi.string().required().min(10).max(200),
+        location: Joi.string().required().max(200),
         discount: Joi.number(),
         maxGuest: Joi.number().required(),
         minAge: Joi.number().required(),
-        travelType: Joi.string().required().min(10).max(50),
+        travelType: Joi.string().required().max(50),
     });
     return schema.validate(travel, { abortEarly: false });
 }

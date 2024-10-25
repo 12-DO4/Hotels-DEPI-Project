@@ -6,6 +6,8 @@ import { useParams } from "react-router-dom";
 import { fetchTravelDetails } from "../APIs/travelsApi";
 import Tooltip from "react-bootstrap/Tooltip";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Toast from 'react-bootstrap/Toast';
+
 import PageNums from "../layout/PageNums";
 import Footer from "../layout/Footer";
 import BtnTop from "../layout/BtnTop";
@@ -14,6 +16,10 @@ function TourDetails() {
   const [adultsCounter, setAdultsCounter] = useState(1);
   const [kidsCounter, setKidsCounter] = useState(1);
   const [childrenCounter, setChildrenCounter] = useState(1);
+  const [price, setPrice] = useState(0);
+  const [show, setShow] = useState(false);
+
+  const [viewToast, setViewToast] = useState(false)
 
   const dispatch = useDispatch();
   const currentTravel = useSelector((state) => state.travelsData.travel);
@@ -21,11 +27,16 @@ function TourDetails() {
   useEffect(() => {
     dispatch(fetchTravelDetails(params.id));
   }, []);
-
+  
+  const handlePrice = (e) => {
+    setPrice(price || currentTravel.price);
+    setPrice(e.target.checked ? price + 420 : price - 420);
+  }
+  
   return (
     <>
       <Header />
-      <main>
+      <main className="position-relative">
         <Breadcrumb pageName={currentTravel.name} />
         <section className="tours-details my-5 pt-5">
           <div className="container">
@@ -79,9 +90,7 @@ function TourDetails() {
                           <div className="d-flex flex-column">
                             <span className="fw-bold text-secondary">From</span>
                             <ins className="text-decoration-none sec-clr fw-bold">
-                              {"$" +
-                                (1 - parseInt(currentTravel.price) / 100) *
-                                  currentTravel.price}
+                              {"$" + +(currentTravel.price)}
                             </ins>
                           </div>
                         </div>
@@ -409,6 +418,7 @@ function TourDetails() {
                                 type="checkbox"
                                 defaultValue="guide"
                                 id="guide"
+                                onChange={handlePrice}
                               />
                               <label
                                 className="form-check-label d-block"
@@ -429,7 +439,7 @@ function TourDetails() {
                                 type="checkbox"
                                 defaultValue="internet"
                                 id="internet"
-                                defaultChecked
+                                onChange={handlePrice}
                               />
                               <label
                                 className="form-check-label d-block"
@@ -448,6 +458,7 @@ function TourDetails() {
                                 type="checkbox"
                                 defaultValue="photography"
                                 id="photography"
+                                onChange={handlePrice}
                               />
                               <label
                                 className="form-check-label d-block"
@@ -466,7 +477,7 @@ function TourDetails() {
                           <div className="col-auto fs-5 fw-bold">
                             <span>Total Cost: </span>
                             <span className="sec-clr">
-                              ${currentTravel.price}
+                              {price || currentTravel.price}
                             </span>
                             <span> / per person</span>
                           </div>
@@ -476,6 +487,7 @@ function TourDetails() {
                             <button
                               type="submit"
                               className="btn btn-secondary p-3 w-100"
+                              onClick={(e) => {e.preventDefault();setShow(true)}}
                             >
                               Proceed To Book
                             </button>
@@ -528,7 +540,7 @@ function TourDetails() {
                               Language Support
                             </small>
                             <span className="fw-bold">
-                              {currentTravel.language}
+                              English
                             </span>
                           </div>
                         </li>
@@ -540,6 +552,18 @@ function TourDetails() {
             </div>
           </div>
         </section>
+        <div className="toasting position-fixed" style={{top: "100px", right: "20px"}}>
+          <Toast onClose={() => setShow(false)} show={show} delay={3000} autohide>
+            <div>
+              <Toast.Header>
+                <strong className="me-auto fs-4">Added Tour</strong>
+              </Toast.Header>
+            </div>
+            <div>
+              <Toast.Body><p>Your Travel booked successfully!</p></Toast.Body>
+            </div>
+          </Toast>
+        </div>
         <PageNums />
       </main>
       <Footer />

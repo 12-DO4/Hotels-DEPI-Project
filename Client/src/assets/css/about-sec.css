@@ -1,4 +1,4 @@
-.about {
+.about:not(.breadcrumb + .about) {
     background-color: #F3F8F6;
     background-image: url('../imgs/about-bg.png');
     background-position: bottom;
